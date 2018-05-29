@@ -3,7 +3,7 @@
   
 <!-- Mirrored from www.bublinastudio.com/flattybs3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 12:15:29 GMT -->
 <head>
-    <title>SI PENGAJUAN JUDUL TUGAS AKHIR</title>
+    <title>Dashboard | Flatty - Flat Administration Template</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta content='text/html;charset=utf-8' http-equiv='content-type'>
     <meta content='Flat administration template for Twitter Bootstrap. Twitter Bootstrap 3 template with Ruby on Rails support.' name='description'>
@@ -35,12 +35,94 @@
     <header>
       <nav class='navbar navbar-default'>
         <a class='navbar-brand' href='index-2.html'>
-          SIPUL TUGAS AKHIR
+          <img width="81" height="21" class="logo" alt="Flatty" src="assets/images/logo.svg" />
+          <img width="21" height="21" class="logo-xs" alt="Flatty" src="assets/images/logo_xs.svg" />
         </a>
         <a class='toggle-nav btn pull-left' href='#'>
           <i class='icon-reorder'></i>
         </a>
         <ul class='nav'>
+          <li class='dropdown light only-icon'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              <i class='icon-cog'></i>
+            </a>
+            <ul class='dropdown-menu color-settings'>
+              <li class='color-settings-body-color'>
+                <div class='color-title'>Change body color</div>
+                <a data-change-to='assets/stylesheets/light-theme.css' href='#'>
+                  Light
+                  <small>(default)</small>
+                </a>
+                <a data-change-to='assets/stylesheets/dark-theme.css' href='#'>
+                  Dark
+                </a>
+                <a data-change-to='assets/stylesheets/dark-blue-theme.css' href='#'>
+                  Dark blue
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li class='color-settings-contrast-color'>
+                <div class='color-title'>Change contrast color</div>
+                            <a data-change-to="contrast-red" href="#"><i class='icon-cog text-red'></i>
+                Red
+                <small>(default)</small>
+                </a>
+    
+                            <a data-change-to="contrast-blue" href="#"><i class='icon-cog text-blue'></i>
+                Blue
+                </a>
+    
+                            <a data-change-to="contrast-orange" href="#"><i class='icon-cog text-orange'></i>
+                Orange
+                </a>
+    
+                            <a data-change-to="contrast-purple" href="#"><i class='icon-cog text-purple'></i>
+                Purple
+                </a>
+    
+                            <a data-change-to="contrast-green" href="#"><i class='icon-cog text-green'></i>
+                Green
+                </a>
+    
+                            <a data-change-to="contrast-muted" href="#"><i class='icon-cog text-muted'></i>
+                Muted
+                </a>
+    
+                            <a data-change-to="contrast-fb" href="#"><i class='icon-cog text-fb'></i>
+                Facebook
+                </a>
+    
+                            <a data-change-to="contrast-dark" href="#"><i class='icon-cog text-dark'></i>
+                Dark
+                </a>
+    
+                            <a data-change-to="contrast-pink" href="#"><i class='icon-cog text-pink'></i>
+                Pink
+                </a>
+    
+                            <a data-change-to="contrast-grass-green" href="#"><i class='icon-cog text-grass-green'></i>
+                Grass green
+                </a>
+    
+                            <a data-change-to="contrast-sea-blue" href="#"><i class='icon-cog text-sea-blue'></i>
+                Sea blue
+                </a>
+    
+                            <a data-change-to="contrast-banana" href="#"><i class='icon-cog text-banana'></i>
+                Banana
+                </a>
+    
+                            <a data-change-to="contrast-dark-orange" href="#"><i class='icon-cog text-dark-orange'></i>
+                Dark orange
+                </a>
+    
+                            <a data-change-to="contrast-brown" href="#"><i class='icon-cog text-brown'></i>
+                Brown
+                </a>
+    
+              </li>
+            </ul>
+          </li>
           <li class='dropdown medium only-icon widget'>
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
               <i class='icon-rss'></i>
@@ -124,7 +206,7 @@
           <li class='dropdown dark user-menu'>
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
               <img width="23" height="23" alt="Mila Kunis" src="assets/images/avatar.jpg" />
-              <span class='user-name'>Guest</span>
+              <span class='user-name'>Mila Kunis</span>
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu'>
@@ -178,8 +260,8 @@
               </a>
             </li>
             <li class=''>
-                      <a class="dropdown-collapse" href="#"><i class='icon-user'></i>
-              <span>Dosen</span>
+                      <a class="dropdown-collapse" href="#"><i class='icon-edit'></i>
+              <span>Forms</span>
               <i class='icon-angle-down angle-down'></i>
               </a>
       
@@ -212,8 +294,8 @@
             </li>
             <li>
               <a class='dropdown-collapse ' href='#'>
-                <i class='icon-user'></i>
-                <span>Mahasiswa</span>
+                <i class='icon-tint'></i>
+                <span>UI Elements & Widgets</span>
                 <i class='icon-angle-down angle-down'></i>
               </a>
               <ul class='nav nav-stacked'>
@@ -233,16 +315,243 @@
             </li>
             <li class=''>
               <a href='buttons_and_icons.html'>
-                <i class='icon-cog'></i>
-                <span>Pengaturan</span>
+                <i class='icon-star'></i>
+                <span>Buttons & Icons</span>
               </a>
             </li>
-            
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-cogs'></i>
+                <span>Components</span>
+                <i class='icon-angle-down angle-down'></i>
+              </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='charts.html'>
+                    <i class='icon-bar-chart'></i>
+                    <span>Charts</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='address_book.html'>
+                    <i class='icon-envelope'></i>
+                    <span>Address book</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='chats.html'>
+                    <i class='icon-comments'></i>
+                    <span>Chats</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='filetrees.html'>
+                    <i class='icon-list-ul'></i>
+                    <span>File trees</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='fileupload.html'>
+                    <i class='icon-file'></i>
+                    <span>Fileupload</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='todo.html'>
+                    <i class='icon-list-alt'></i>
+                    <span>Todo list</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='wysiwyg.html'>
+                    <i class='icon-paste'></i>
+                    <span>WYSIWYG</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li class=''>
               <a href='tables.html'>
                 <i class='icon-table'></i>
                 <span>Tables</span>
               </a>
+            </li>
+            <li class=''>
+              <a href='grid.html'>
+                <i class='icon-th'></i>
+                <span>Grid</span>
+              </a>
+            </li>
+            <li class=''>
+              <a href='type.html'>
+                <i class='icon-font'></i>
+                <span>Typography</span>
+              </a>
+            </li>
+            <li class=''>
+              <a href='calendar.html'>
+                <i class='icon-calendar'></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-book'></i>
+                <span>Example pages</span>
+                <i class='icon-angle-down angle-down'></i>
+              </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='invoice.html'>
+                    <i class='icon-money'></i>
+                    <span>Invoice</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='gallery.html'>
+                    <i class='icon-picture'></i>
+                    <span>Gallery</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='timeline.html'>
+                    <i class='icon-time'></i>
+                    <span>Timeline</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='pricing_tables.html'>
+                    <i class='icon-table'></i>
+                    <span>Pricing tables</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='user_profile.html'>
+                    <i class='icon-user'></i>
+                    <span>User profile</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='err404.html' target='_blank'>
+                    <i class='icon-question-sign'></i>
+                    <span>404 Error</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='err500.html' target='_blank'>
+                    <i class='icon-cogs'></i>
+                    <span>500 Error</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='sign_in.html' target='_blank'>
+                    <i class='icon-signin'></i>
+                    <span>Sign in</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='faq.html'>
+                    <i class='icon-bullhorn'></i>
+                    <span>FAQ</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='orders.html'>
+                    <i class='icon-inbox'></i>
+                    <span>Orders</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='search_results.html'>
+                    <i class='icon-search'></i>
+                    <span>Search results</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='blank.html'>
+                    <i class='icon-circle-blank'></i>
+                    <span>Blank page</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-cog'></i>
+                <span>Layouts</span>
+                <i class='icon-angle-down angle-down'></i>
+              </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='closed_navigation.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Closed navigation</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='fixed_header.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Fixed header</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='fixed_navigation.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Fixed navigation</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='fixed_navigation_and_header.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Fixed navigation & header</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class=''>
+              <a href='email_templates.html'>
+                <i class='icon-mail-reply'></i>
+                <span>Email templates</span>
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-collapse' href='#'>
+                <i class='icon-folder-open-alt'></i>
+                <span>Four level dropdown</span>
+                <i class='icon-angle-down angle-down'></i>
+              </a>
+              <ul class='nav nav-stacked'>
+                <li>
+                  <a class='dropdown-collapse' href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Second level</span>
+                    <i class='icon-angle-down angle-down'></i>
+                  </a>
+                  <ul class='nav nav-stacked'>
+                    <li>
+                      <a class='dropdown-collapse' href='#'>
+                        <i class='icon-caret-right'></i>
+                        <span>Third level</span>
+                        <i class='icon-angle-down angle-down'></i>
+                      </a>
+                      <ul class='nav nav-stacked'>
+                        <li>
+                          <a href='#'>
+                            <i class='icon-caret-right'></i>
+                            <span>Fourth level</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href='#'>
+                            <i class='icon-caret-right'></i>
+                            <span>Another fourth level</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -257,13 +566,26 @@
                   <i class='icon-dashboard'></i>
                   <span>Dashboard</span>
                 </h1>
-                
+                <div class='pull-right'>
+                  <div class='btn-group'>
+                    <a class="btn btn-white hidden-xs" href="#">Last month</a>
+                    <a class="btn btn-white" href="#">Last week</a>
+                    <a class="btn btn-white " href="#">Today</a>
+                          <a class="btn btn-white" id="daterange" href="#"><i class='icon-calendar'></i>
+                    <span>Custom</span>
+                    <b class='caret'></b>
+                    </a>
+              
+                  </div>
+                </div>
               </div>
               <div class='alert alert-info alert-dismissable'>
                 <a class='close' data-dismiss='alert' href='#'>&times;</a>
-                Selamat Datang di
-                <strong>SIPUL TUGAS AKHIR</strong>
-                - Sistem Informasi Pengajuan Judul Tugas Akhir
+                Welcome to
+                <strong>Flatty (v2.2)</strong>
+                - I hope you'll like it. Don't forget - you can change theme color in top right corner
+                <i class='icon-cog'></i>
+                if you want.
               </div>
               <div class='row box box-transparent'>
                 <div class='col-xs-4 col-sm-2'>
@@ -332,7 +654,7 @@
                   <div class='box-header'>
                     <div class='title'>
                       <i class='icon-inbox'></i>
-                      Usulan Judul
+                      Orders
                     </div>
                     <div class='actions'>
                       <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
@@ -350,7 +672,7 @@
                   <div class='box-header'>
                     <div class='title'>
                       <i class='icon-group'></i>
-                      Statistik Mahasiswa
+                      Users
                     </div>
                     <div class='actions'>
                       <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
