@@ -187,25 +187,25 @@
                 <li class=''>
                   <a href='form_styles.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Form styles and features</span>
+                    <span>Data Dosen</span>
                   </a>
                 </li>
                 <li class=''>
                   <a href='form_components.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Form components</span>
+                    <span>Rekomendasi Judul</span>
                   </a>
                 </li>
                 <li class=''>
                   <a href='validations.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Validations</span>
+                    <span>Hak Akses</span>
                   </a>
                 </li>
                 <li class=''>
                   <a href='wizard.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Wizard</span>
+                    <span>Pengajuan Judul</span>
                   </a>
                 </li>
               </ul>
@@ -220,13 +220,19 @@
                 <li class=''>
                   <a href='ui_elements.html'>
                     <i class='icon-caret-right'></i>
-                    <span>UI Elements</span>
+                    <span>Data Mahasiswa</span>
                   </a>
                 </li>
                 <li class=''>
                   <a href='widgets.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Widgets</span>
+                    <span>Pengajuan Judul</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='widgets.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Pengajual Judul Final</span>
                   </a>
                 </li>
               </ul>
