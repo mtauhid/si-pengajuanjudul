@@ -20,11 +20,20 @@
 			</tr>
 			<tr>
 				<td>PRODI DOSEN</td>
-				<td><input type="text" name="prodi_dosen"></td>
+				<td><select name="prodi_dosen">
+				<option value="MIF">MIF</option>
+				<option value="TIF">TIF</option>
+				<option value="TKK">TKK</option>
+                </td>
+				
 			</tr>
 			<tr>
 				<td>JABATAN</td>
-				<td><input type="text" name="level_dosen"></td>
+				<td><select name="level_dosen">
+				<option value="DOSEN">DOSEN</option>
+				<option value="REVIEWER">REVIEWER</option>
+				<option value="KORDINATOR">KORDINATOR</option>
+                </td>
 			</tr>
 			 <tr>
 				<td></td>

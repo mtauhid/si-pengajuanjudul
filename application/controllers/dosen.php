@@ -46,21 +46,20 @@ class Dosen extends CI_Controller{
 	}
 
 	function update(){
-	$id = $this->input->post('id');
 	$nip = $this->input->post('nip');
 	$nama_dosen = $this->input->post('nama_dosen');
 	$prodi_dosen = $this->input->post('prodi_dosen');
 	$level_dosen = $this->input->post('level_dosen');
  
 	$data = array(
-		'nip' => $nama,
+		'nip' => $nip,
 		'nama_dosen' => $nama_dosen,
 		'prodi_dosen' => $prodi_dosen,
 		'level_dosen' => $level_dosen
 	);
  
 	$where = array(
-		'id' => $id
+		'nip' => $nip
 	);
  
 	$this->m_data->update_data($where,$data,'tb_dosen');
