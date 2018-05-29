@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
+	<title>INPUT DOSEN</title>
 </head>
 <body>
 	<center>
 		<h1>INPUT JUDUL OLEH DOSEN</h1>
 		<h3>Edit Data</h3>
 	</center>
-	<?php foreach($user as $u){ ?>
-	<form action="<?php echo base_url(). 'dosenbaru/update'; ?>" method="post">
+	<?php foreach($tb_dosen as $u){ ?>
+	<form action="<?php echo base_url(). 'dosen/update'; ?>" method="post">
 		<table style="margin:20px auto;">
 			<tr>
-				<td>Nama</td>
+				<td>NIP</td>
 				<td>
-					<input type="hidden" name="id" value="<?php echo $u->id ?>">
-					<input type="text" name="nama" value="<?php echo $u->nama ?>">
+					<input type="hidden" name="nip" value="<?php echo $u->nip ?>">
+					<input type="text" name="nip" value="<?php echo $u->nip ?>">
 				</td>
 			</tr>
 			<tr>
-				<td>Alamat</td>
-				<td><input type="text" name="alamat" value="<?php echo $u->alamat ?>"></td>
+				<td>NAMA DOSEN</td>
+				<td><input type="text" name="nama_dosen" value="<?php echo $u->nama_dosen ?>"></td>
 			</tr>
 			<tr>
-				<td>Pekerjaan</td>
-				<td><input type="text" name="pekerjaan" value="<?php echo $u->pekerjaan ?>"></td>
+				<td>PRODI DOSEN</td>
+				<td><input type="text" name="prodi_dosen" value="<?php echo $u->prodi_dosen ?>"></td>
 			</tr>
 			<tr>
+				<td>JABATAN DOSEN</td>
+				<td><input type="text" name="prodi_dosen" value="<?php echo $u->prodi_dosen ?>"></td>
+			</tr>
+			 <tr>	
 				<td></td>
 				<td><input type="submit" value="Simpan"></td>
 			</tr>

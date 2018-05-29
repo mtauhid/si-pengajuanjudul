@@ -5,7 +5,7 @@
 </head>
 <body>
 	<center><h1>INPUT JUDUL TUGAS AHIR OLEH DOSEN</h1></center>
-	<center><?php echo anchor('dosenbaru/tambahdata','Tambah Judul'); ?></center>
+	<center><?php echo anchor('dosen/tambah','Tambah Judul'); ?></center>
 	<table style="margin:20px auto;" border="1">
 		<tr>
 			<th>No</th>

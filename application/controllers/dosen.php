@@ -9,12 +9,12 @@ class Dosen extends CI_Controller{
 	}
  
 	function index(){
-		$data['user'] = $this->m_data->tampil_data()->result();
-		$this->load->view('v_tampil',$data);
+		$data['tb_dosen'] = $this->m_data->tampil_data()->result();
+		$this->load->view('v_tampildosen',$data);
 	}
 
 	function tambah(){
-		$this->load->view('v_input');
+		$this->load->view('v_inputdosen');
 	}
 
 	function tambah_aksi(){
@@ -29,20 +29,20 @@ class Dosen extends CI_Controller{
 			'prodi_dosen' => $prodi_dosen,
 			'level_dosen' => $level_dosen
 			);
-		$this->m_data->input_data($data,'user');
-		redirect('crud/index');
+		$this->m_data->input_data($data,'tb_dosen');
+		redirect('dosen/index');
 	}
 
-	function hapus($id){
-		$where = array('id' => $id);
-		$this->m_data->hapus_data($where,'user');
-		redirect('crud/index');
+	function hapus($nip){
+		$where = array('nip' => $nip);	
+		$this->m_data->hapus_data($where,'tb_dosen');
+		redirect('dosen/index');
 	}
 
-	function edit($id){
-		$where = array('id' => $id);
-		$data['user'] = $this->m_data->edit_data($where,'user')->result();
-		$this->load->view('v_edit',$data);
+	function edit($nip){
+		$where = array('nip' => $nip);
+		$data['tb_dosen'] = $this->m_data->edit_data($where,'tb_dosen')->result();
+		$this->load->view('v_editdosen',$data);
 	}
 
 	function update(){
@@ -63,7 +63,7 @@ class Dosen extends CI_Controller{
 		'id' => $id
 	);
  
-	$this->m_data->update_data($where,$data,'user');
-	redirect('crud/index');
+	$this->m_data->update_data($where,$data,'tb_dosen');
+	redirect('dosen/index');
 }
 }

@@ -8,21 +8,25 @@
 		<h1>SILAHKAN TAMBAH JUDUL BARU</h1>
 		<h3>Tambahkan Judul Baru</h3>
 	</center>
-	<form action="<?php echo base_url(). 'dosenbaru/tambah_aksi'; ?>" method="post">
+	<form action="<?php echo base_url(). 'dosen/tambah_aksi'; ?>" method="post">
 		<table style="margin:20px auto;">
 			<tr>
-				<td>Nama</td>
-				<td><input type="text" name="nama"></td>
+				<td>NIP</td>
+				<td><input type="text" name="nip"></td>
 			</tr>
 			<tr>
-				<td>Alamat</td>
-				<td><input type="text" name="alamat"></td>
+				<td>NAMA DOSEN</td>
+				<td><input type="text" name="nama_dosen"></td>
 			</tr>
 			<tr>
-				<td>Pekerjaan</td>
-				<td><input type="text" name="pekerjaan"></td>
+				<td>PRODI DOSEN</td>
+				<td><input type="text" name="prodi_dosen"></td>
 			</tr>
 			<tr>
+				<td>JABATAN</td>
+				<td><input type="text" name="level_dosen"></td>
+			</tr>
+			 <tr>
 				<td></td>
 				<td><input type="submit" value="Tambah"></td>
 			</tr>
