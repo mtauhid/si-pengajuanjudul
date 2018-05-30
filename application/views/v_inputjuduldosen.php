@@ -8,32 +8,39 @@
 		<h1>SILAHKAN TAMBAH JUDUL BARU</h1>
 		<h3>Tambahkan Judul Baru</h3>
 	</center>
-	<form action="<?php echo base_url(). 'dosen/tambah_aksi'; ?>" method="post">
+     <?php 
+	$cariid = mysqli_query("select max(id_judul) from tb_rekomendasijudul;1") or die (mysqli_error());
+    $dataid = mysqli_fetch_array($cariid);
+     if ($dataid) {
+    	$nilaiid = substr($dataid[0], 1);
+    	$id = (int) $nilaiid;
+    	$id = $id + 1 ;
+    	$hasilid = "P".str_pad($id, 3, "0", STR_PAD_LEFT);
+    } else {
+    	$hasilid = "P001";
+    }
+	?>
+
+	<form action="<?php echo base_url(). 'c_inputjuduldosen/tambah_aksi'; ?>" method="post">
 		<table style="margin:20px auto;">
+	
+			<tr>
+				<td>ID JUDUL</td>
+				<td><input type="text" name="id_judul" value="<?php echo $hasilid?>"></td>
+			</tr>
 			<tr>
 				<td>NIP</td>
 				<td><input type="text" name="nip"></td>
 			</tr>
 			<tr>
-				<td>NAMA DOSEN</td>
-				<td><input type="text" name="nama_dosen"></td>
-			</tr>
-			<tr>
-				<td>PRODI DOSEN</td>
-				<td><select name="prodi_dosen">
-				<option value="MIF">MIF</option>
-				<option value="TIF">TIF</option>
-				<option value="TKK">TKK</option>
-                </td>
+				<td>JUDUL TUGAS AHIR</td>
+				<td><input type="text" name="nama_judul"></td>
 				
 			</tr>
 			<tr>
-				<td>JABATAN</td>
-				<td><select name="level_dosen">
-				<option value="DOSEN">DOSEN</option>
-				<option value="REVIEWER">REVIEWER</option>
-				<option value="KORDINATOR">KORDINATOR</option>
-                </td>
+				<td>KUOTA MAHASISWA</td>
+				<td><input type="text" name="kuota"></td>
+				
 			</tr>
 			 <tr>
 				<td></td>

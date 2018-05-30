@@ -9,23 +9,26 @@ class c_inputjuduldosen extends CI_Controller{
 	}
  
 	function index(){
-		$data['tb_rekomendasijudul'] = $this->m_inputjuduldosen->input_data()->result();
-		$this->load->view('v_inputjuduldosen');
-	}
+		$data['tb_rekomendasijudul'] = $this->m_inputjuduldosen->tampil_data()->result();
+		$this->load->view('v_tampilinputjuduldosen',$data);
+	} 
 
-	function lihat(){
-		$this->load->view('v_tampiljuduldosen',$data);
+	function tambah(){
+		$this->load->view('v_inputjuduldosen');
 	}
 
 	function tambah_aksi(){
 		$id_judul = $this->input->post('id_judul');
 		$nip = $this->input->post('nip');
 		$nama_judul = $this->input->post('nama_judul');
+		$kuota = $this->input->post('kuota');
+		
  
 		$data = array(
 			'id_judul' => $id_judul,
 			'nip' => $nip,
-			'nama_judul' => $nama_judul
+			'nama_judul' => $nama_judul,
+			'kuota'=>$kuota
 			);
 		$this->m_inputjuduldosen->input_data($data,'tb_rekomendasijudul');
 		redirect('c_inputjuduldosen/index');
@@ -47,12 +50,13 @@ class c_inputjuduldosen extends CI_Controller{
 	$id_judul = $this->input->post('id_judul');
 	$nip = $this->input->post('nip');
 	$nama_judul = $this->input->post('nama_judul');
-	
+	$kuota = $this->input->post('kuota');
  
 	$data = array(
 		'id_judul' => $id_judul,
 		'nip' => $nip,
-		'nama_judul' => $nama_judul
+		'nama_judul' => $nama_judul,
+		'kuota'=> $kuota
 	);
  
 	$where = array(

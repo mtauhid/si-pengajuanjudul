@@ -1,8 +1,8 @@
 <?php 
  
-class m_datadosen extends CI_Model{
+class m_inputjuduldosen extends CI_Model{
 	function tampil_data(){
-		return $this->db->get('tb_dosen');
+		return $this->db->get('tb_rekomendasijudul');
 	}
 
 	function input_data($data,$table){
