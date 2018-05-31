@@ -2,7 +2,7 @@
 class m_hakAksesDosen extends CI_Model{
    function selectAll()
    {
-		$this->db->order_by("nip","desc"); 
+		$this->db->order_by("nip","asc"); 
 		return $this->db->get('tb_dosen')->result();
    }
 
