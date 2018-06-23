@@ -1,4 +1,4 @@
-<section id='content'>
+      <section id='content'>
         <div class='container'>
           <div class='row' id='content-wrapper'>
             <div class='col-xs-12'>
@@ -16,3 +16,4 @@
                 <strong>SIPUL TUGAS AKHIR</strong>
                 - Sistem Informasi Pengajuan Judul Tugas Akhir
               </div>
+              
