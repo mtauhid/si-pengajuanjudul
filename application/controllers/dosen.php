@@ -39,7 +39,7 @@ class Dosen extends CI_Controller{
 		redirect('dosen/index');
 	}
 
-	function edit($nip){
+	public function edit($nip){
 		$where = array('nip' => $nip);
 		$data['tb_dosen'] = $this->m_datadosen->edit_data($where,'tb_dosen')->result();
 		$this->load->view('v_editdosen',$data);

@@ -1,69 +1,79 @@
-<?php 
- 
-class c_inputjuduldosen extends CI_Controller{
- 
-	function __construct(){
-		parent::__construct();		
-		$this->load->model('m_inputjuduldosen');
-                $this->load->helper('url');
-	}
- 
-	function index(){
-		$data['tb_rekomendasijudul'] = $this->m_inputjuduldosen->tampil_data()->result();
-		$this->load->view('v_tampilinputjuduldosen',$data);
-	} 
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-	function tambah(){
-		$this->load->view('v_inputjuduldosen');
-	}
+class c_inputjuduldosen extends CI_Controller {
 
-	function tambah_aksi(){
-		$id_judul = $this->input->post('id_judul');
-		$nip = $this->input->post('nip');
-		$nama_judul = $this->input->post('nama_judul');
-		$kuota = $this->input->post('kuota');
-		
- 
-		$data = array(
-			'id_judul' => $id_judul,
-			'nip' => $nip,
-			'nama_judul' => $nama_judul,
-			'kuota'=>$kuota
-			);
-		$this->m_inputjuduldosen->input_data($data,'tb_rekomendasijudul');
-		redirect('c_inputjuduldosen/index');
-	}
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
 
-	function hapus($id_judul){
-		$where = array('id_judul' => $id_judul);	
-		$this->m_inputjuduldosen->hapus_data($where,'tb_rekomendasijudul');
-		redirect('c_inputjuduldosen/index');
-	}
+    public function index()
+    {
 
-	function edit($id_judul){
-		$where = array('id_judul' => $id_judul);
-		$data['tb_rekomendasijudul'] = $this->m_inputjuduldosen->edit_data($where,'tb_rekomendasijudul')->result();
-		$this->load->view('v_editjuduldosen',$data);
-	}
+        
+        // apakah ada pencarian data spesifik dengan kata kunci tertentu?
+        $search = $this->input->get('search');
+        if (!empty($search)) {
 
-	function update(){
-	$id_judul = $this->input->post('id_judul');
-	$nip = $this->input->post('nip');
-	$nama_judul = $this->input->post('nama_judul');
-	$kuota = $this->input->post('kuota');
- 
-	$data = array(
-		'id_judul' => $id_judul,
-		'nip' => $nip,
-		'nama_judul' => $nama_judul,
-		'kuota'=> $kuota
-	);
- 
-	$where = array(
-		'id_judul' => $id_judul
-	);
- 
-	$this->m_inputjuduldosen->update_data($where,$data,'tb_rekomendasijudul');
-	redirect('c_inputjuduldosen/index');
-}
+            $this->db->like('id_judul', $search, 'both'); 
+            $this->db->or_like('nip', $search, 'both'); 
+            $this->db->or_like('nama_judul', $search, 'both'); 
+            $this->db->or_like('kuota', $search, 'both'); 
+        }
+        $tb_rekomendasijudul = $this->db->get('tb_rekomendasijudul');
+        $data['result'] = $tb_rekomendasijudul->result_array();
+        $data['num_rows'] = $tb_rekomendasijudul->num_rows();
+        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('v_readinputjuduldosen', $data);
+        $this->load->view('v_footinputjuduldosen');
+    }
+
+    public function save()
+    {
+        $input['id_judul'] = $this->input->post('id_judul');
+        $input['nip'] = $this->input->post('nip');
+        $input['nama_judul'] = $this->input->post('nama_judul');
+        $input['kuota'] = $this->input->post('kuota');
+        $updateID = $this->input->post('updateID');
+        if (!empty($updateID)) {
+            $this->db->where('id_judul', $updateID);
+            $this->db->update('tb_rekomendasijudul', $input);
+        } else {
+            $this->db->insert('tb_rekomendasijudul', $input);
+        }
+        redirect('/c_inputjuduldosen/index');
+    }
+
+    public function v_createinputjuduldosen()
+    {
+        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('v_createinputjuduldosen');
+        $this->load->view('v_footinputjuduldosen');
+    }
+
+    public function v_updateinputjuduldosen($id)
+    {
+        $this->db->where('id_judul', $id);
+        $data['update'] = $this->db->get('tb_rekomendasijudul')->row_array();
+        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('v_createinputjuduldosen', $data);
+        $this->load->view('v_footinputjuduldosen');
+    }
+
+    public function v_deleteinputjuduldosen($id)
+    {
+        $this->db->where('id_judul', $id);
+        $data['v_deleteinputjuduldosen'] = $this->db->get('tb_rekomendasijudul')->row_array();
+        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('v_deleteinputjuduldosen', $data);
+        $this->load->view('v_footinputjuduldosen');
+    }
+
+    public function real_delete()
+    {
+        $id = $this->input->post('id_judul');
+        $this->db->where('id_judul', $id);
+        $this->db->delete('tb_rekomendasijudul');
+        redirect('/c_inputjuduldosen/');
+    }
 }
