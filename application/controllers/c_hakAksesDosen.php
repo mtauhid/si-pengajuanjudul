@@ -5,12 +5,11 @@ class c_hakAksesDosen extends CI_Controller{
 		$this->load->model('m_hakAksesDosen');
 	}
 	function index(){
-		$this->load->view('template/header');
-        $this->load->view('v_home');
-       	$this->load->view('template/sidebar');
+		$this->load->view('header');
+       	$this->load->view('sidebar');
        	$data['dosen']=$this->m_hakAksesDosen->selectAll();
 		$this->load->view('v_hakAksesDosen',$data);
-       	$this->load->view('template/footer');
+       	$this->load->view('footer');
 		
 	}
 }

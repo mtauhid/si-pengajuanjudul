@@ -77,7 +77,7 @@
             </li>
             
             <li class=''>
-              <a href='tables.html'>
+              <a href='c_statistik'>
                 <i class='icon-bar-chart'></i>
                 <span>Statistik</span>
               </a>

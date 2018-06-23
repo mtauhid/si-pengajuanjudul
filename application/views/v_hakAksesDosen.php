@@ -1,4 +1,4 @@
-<section id='content'>
+      <section id='content'>
         <div class='container'>
           <div class='row' id='content-wrapper'>
             <div class='col-xs-12'>
