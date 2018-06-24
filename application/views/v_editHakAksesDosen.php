@@ -1,29 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
-</head>
-<body>
-	<center>
-		<h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1>
-		<h3>Edit Data</h3>
-	</center>
-	<?php foreach($dosen as $d){ ?>
-	<form action="<?php echo base_url(). 'crud/update'; ?>" method="post">
-		<table style="margin:20px auto;">
-			<tr>
-				<td>Hak Akses</td>
-				<td>
-					<input type="hidden" name="nip" value="<?php echo $d->nip ?>">
-					<input type="text" name="hak_akses" value="<?php echo $d->level_dosen ?>">
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Simpan"></td>
-			</tr>
-		</table>
-	</form>	
-	<?php } ?>
-</body>
-</html>
+<br/>
+<?php
+foreach($dosen as $u){ 
+?>
+<div class="container">
+
+    <?php if (isset($u)) { 
+        echo '<div class="alert alert-info">Anda akan mengubah data dosen <strong>'.$u->nama_dosen.'</strong></div>';
+      } ?>
+    <div class="card">
+        
+        <div class="card-body">
+            <form method="post" action="<?php echo site_url('/c_hakAksesDosen/update') ?>">
+            	<div class="form-group">
+               		<label for="prodi_dosen">Hak Akses Dosen</label>
+               		<td>
+               			<input type="hidden" name="nip" value="<?php echo $u->nip?>">
+               			<select name="level_dosen" class="form-control">
+                			<option selected disabled>- Hak Akses Dosen</option>
+                			<?php if($u->level_dosen=="Dosen"){?>
+               				<option value="<?php echo $u->level_dosen?>" selected><?php echo $u->level_dosen?></option>
+               				<option value="Reviewer">Reviewer</option>
+               				<option value="Koordinator">Koordinator</option>
+               				<?php } else if($u->level_dosen=="Reviewer") {?>
+               				<option value="Reviewer">Dosen</option>
+               				<option value="<?php echo $u->level_dosen?>" selected><?php echo $u->level_dosen?></option>
+               				<option value="Koordinator">Koordinator</option>
+               				<?php } else if($u->level_dosen=="Koordinator") {?>
+               				<option value="Dosen">Dosen</option>
+               				<option value="Reviewer">Reviewer</option>
+               				<option value="<?php echo $u->level_dosen?>" selected><?php echo $u->level_dosen?></option>
+               				<?php } ?>
+             			</select>
+                	</td>
+              	</div>
+              	<button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            </form>
+        </div>
+    </div>
+<?php } ?>
+</div>

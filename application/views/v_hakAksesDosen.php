@@ -1,50 +1,40 @@
-      <section id='content'>
-        <div class='container'>
-          <div class='row' id='content-wrapper'>
-            <div class='col-xs-12'>
-              
-              <div class='page-header page-header-with-buttons'>
-                <h1 class='pull-left'>
-                  <i class='icon-dashboard'></i>
-                  <span>Hak Akses Dosen</span>
-                </h1>
-                
-              </div>
-                <div class='row'>
-                  <div class='col-sm-12'>
-                      <div class='box-content box-no-padding'>
-                        <table class='table table-striped' style='margin-bottom:0;'>
-                          <thead>
-                            <tr>
-                              <th>NIP</th>
-                              <th>Nama</th>
-                              <th>Program Studi</th>
-                              <th colspan="2" width="1%" style="text-align: center;">Hak Akses</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                          <?php
-                            $no=1;
-                            foreach($dosen as $b){
-                          ?>
-                          <tr>
-                            <td><?php echo $b->nip ?></td>
-                            <td><?php echo $b->nama_dosen ?></td>
-                            <td><?php echo $b->prodi_dosen ?></td>
-                            <td style="background-color: #f1f1f1;text-align: center;"><?php echo $b->level_dosen ?></td>
-                            <td style="background-color: #f1f1f1">
-                              <div class='text-right'>
-                                <a class='btn btn-success btn-sm' href='#'>
-                                  Ubah
-                                </a>
-                              </div>
-                            </td>
-                           </tr>
-                          <?php
-                            }
-                          ?>
-                          </tbody>
-                        </table>
-                      </div>
-                  </div>
-                </div>
+<br/>
+<div class="container">
+  <div class="card">
+        <div class="card-body">
+            <form method="get" action="<?php echo site_url('/c_inputdosen/') ?>" class="form-inline">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search" id="search" placeholder="Kata Kunci Pencarian">
+                  </div>  
+                <button type="submit" class="btn btn-primary">Cari</button>
+            </form>
+        </div>
+    </div>
+
+    <br/>
+
+  <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
+    <table class="table table-bordered">
+      <tr>
+          <th style="text-align: center;">NIP</th>
+          <th>Nama Dosen</th>
+          <th style="text-align: center;">Prodi Dosen</th>
+          <th colspan="2" style="text-align: center;width: 10px">Hak Akses</th>
+      </tr>
+      <?php
+        $no=1;
+        foreach($dosen as $b){
+      ?>
+        <tr>
+          <td style="text-align: center;"><?php echo $b->nip ?></td>
+          <td><?php echo $b->nama_dosen ?></td>
+          <td style="text-align: center;"><?php echo $b->prodi_dosen ?></td>
+          <td style="background-color: #f1f1f1;text-align: center;"><?php echo $b->level_dosen ?></td>
+          <td style="text-align: center;">
+            <a href="<?php echo site_url('/c_hakAksesDosen/editHakAksesDosen/'.$b->nip)?>" class="btn btn-primary">Ubah</a>
+          </td>
+          </tr>
+        <?php
+          }
+        ?>
+    </table>

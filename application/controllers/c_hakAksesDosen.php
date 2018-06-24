@@ -5,19 +5,37 @@ class c_hakAksesDosen extends CI_Controller{
 		$this->load->model('m_hakAksesDosen');
 	}
 	function index(){
-		$this->load->view('header');
-       	$this->load->view('sidebar');
-       	$data['dosen']=$this->m_hakAksesDosen->selectAll();
-		$this->load->view('v_hakAksesDosen',$data);
-       	$this->load->view('footer');
+    $tb_dosen = $this->db->get('tb_dosen');
+    $data['num_rows'] = $tb_dosen->num_rows();
+    $data['dosen']=$this->m_hakAksesDosen->selectAll();
+    $this->load->view('header');
+    $this->load->view('v_hakAksesDosen',$data);
+    $this->load->view('footer');
 		
 	}
+
+  function editHakAksesDosen($nip){
+    $this->load->view('header');
+    $where = array('nip' => $nip);
+    $data['dosen'] = $this->m_hakAksesDosen->editHakAksesDosen($where,'tb_dosen')->result();
+    $this->load->view('v_editHakAksesDosen',$data);
+    $this->load->view('footer');
 }
 
-function editHakAksesDosen($nip){
-	$where = array('nip' => $nip);
-	$data['dosen'] = $this->m_hakAksesDosen->editHakAkses($where,'dosen')->result();
-	$this->load->view('v_hakAksesDosen',$data);
+function update(){
+  $nip = $this->input->post('nip');
+  $level = $this->input->post('level_dosen');
+ 
+  $data = array(
+    'level_dosen' => $level
+  );
+ 
+  $where = array(
+    'nip' => $nip
+  );
+ 
+  $this->m_hakAksesDosen->update_data($where,$data,'tb_dosen');
+  redirect('c_hakAksesDosen');
 }
-
+}
 ?>

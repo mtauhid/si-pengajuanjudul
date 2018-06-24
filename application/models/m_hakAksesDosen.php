@@ -6,8 +6,13 @@ class m_hakAksesDosen extends CI_Model{
 		return $this->db->get('tb_dosen')->result();
    }
 
-   function editHakAkses($where,$table){		
+   function editHakAksesDosen($where,$table){		
 	return $this->db->get_where($table,$where);
-}
+	}
+
+	function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
 }
 ?>
