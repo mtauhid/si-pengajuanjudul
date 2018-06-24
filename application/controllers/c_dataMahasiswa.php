@@ -1,42 +1,75 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class c_dataMahasiswa extends CI_Controller {
-  
-  public function __construct(){
-    parent::__construct();
-    
-    $this->load->model('m_Mahasiswamodel');
-  }
-  
-  public function index(){
-    $data['c_dataMahasiswa'] = $this->m_Mahasiswamodel->view();
-    $this->load->view('v_tampildatamahasiswa', $data);
-  }
-  
-  public function tambah(){
-    if($this->input->post('submit')){ 
-      if($this->m_Mahasiswamodel->validation("save")){ 
-        $this->m_Mahasiswamodel->save();
-        redirect('c_dataMahasiswa');
-      }
-    }
-    
-    $this->load->view('v_inputdatamahasiswa');
-  }
-  
-  public function ubah($nim){
-    if($this->input->post('submit')){ 
-      if($this->m_Mahasiswamodel->validation("update")){ 
-        $this->m_Mahasiswamodel->edit($nim);
-        redirect('c_dataMahasiswa');
-      }
-    }
-    
-    $data['c_dataMahasiswa'] = $this->m_Mahasiswamodel->view_by($nim);
-    $this->load->view('v_inputdatamahasiswa', $data);
-  }
-  
-  public function hapus($nim){
-    $this->m_Mahasiswamodel->delete($nim);
-    redirect('c_dataMahasiswa');
-  }
+<?php 
+ 
+class c_dataMahasiswa extends CI_Controller{
+ 
+	function __construct(){
+		parent::__construct();		
+		$this->load->model('m_Mahasiswamodel');
+                $this->load->helper('url');
+	}
+ 
+	function index(){
+		$data['tb_mahasiswa'] = $this->m_Mahasiswamodel->tampil_data()->result();
+		$this->load->view('v_tampildatamahasiswa',$data);
+	}
+
+	function tambah(){
+		
+		$this->load->view('v_inputmahasiswa');
+	}
+
+	function tambah_aksi(){
+		$nim = $this->input->post('nim');
+		$nama_mahasiswa = $this->input->post('nama_mahasiswa');
+		$gol_mahasiswa = $this->input->post('gol_mahasiswa');
+		$prodi_mahasiswa = $this->input->post('prodi_mahasiswa');
+		$semester = $this->input->post('semester');
+ 
+ 
+		$data = array(
+			'nim' => $nim,
+			'nama_mahasiswa' => $nama_mahasiswa,
+			'gol_mahasiswa' => $gol_mahasiswa,
+			'prodi_mahasiswa' => $prodi_mahasiswa,
+			'semester' => $semester
+			);
+		$this->m_Mahasiswamodel->input_data($data,'tb_mahasiswa');
+		redirect('c_dataMahasiswa/index');
+	}
+
+	function hapus($nim){
+		$where = array('nim' => $nim);	
+		$this->m_Mahasiswamodel->hapus_data($where,'tb_mahasiswa');
+		redirect('c_dataMahasiswa/index');
+	}
+
+	public function edit($nim){
+		$where = array('nim' => $nim);
+		$data['tb_mahasiswa'] = $this->m_Mahasiswamodel->edit_data($where,'tb_mahasiswa')->result();
+		$this->load->view('v_editmahasiswa',$data);
+	}
+
+	function update(){
+	$nim = $this->input->post('nim');
+	$nama_mahasiswa = $this->input->post('nama_mahasiswa');
+	$gol_mahasiswa = $this->input->post('gol_mahasiswa');
+	$prodi_mahasiswa = $this->input->post('prodi_mahasiswa');
+	$semester = $this->input->post('semester');
+	
+	$data = array(
+		'nim' => $nim,
+		'nama_mahasiswa' => $nama_mahasiswa,
+		'gol_mahasiswa' => $gol_mahasiswa,
+		'prodi_mahasiswa' => $prodi_mahasiswa,
+		'semester' => $semester
+	);
+ 
+	$where = array(
+		'nim' => $nim
+	);
+ 
+	$this->m_Mahasiswamodel->update_data($where,$data,'tb_mahasiswa');
+	redirect('c_dataMahasiswa/index');
 }
+}
+?>
