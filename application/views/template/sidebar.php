@@ -17,13 +17,13 @@
       
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_inputDosen'>
                     <i class='icon-caret-right'></i>
                     <span>Data Dosen</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='form_components.html'>
+                  <a href='c_inputJudulDosen'>
                     <i class='icon-caret-right'></i>
                     <span>Rekomendasi Judul</span>
                   </a>
@@ -37,7 +37,7 @@
                 <li class=''>
                   <a href='wizard.html'>
                     <i class='icon-caret-right'></i>
-                    <span>Pengajuan Judul</span>
+                    <span>Pengajuan Judul Mahasiswa</span>
                   </a>
                 </li>
               </ul>
