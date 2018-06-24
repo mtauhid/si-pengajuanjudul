@@ -9,9 +9,6 @@
     	public function index(){
 
         	$this->load->view('header');
-        	$this->load->view('sidebar');
-        	$this->load->view('content');
-            $this->load->view('v_home');
         	$this->load->view('footer');
         }
     }

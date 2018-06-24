@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td>PRODI DOSEN</td>
-				<td><select name="prodi_dosen">
+				<td><select name="prodi_dosen" class="form-control">
 				<option value="MIF">MIF</option>
 				<option value="TIF">TIF</option>
 				<option value="TKK">TKK</option>
@@ -29,7 +29,7 @@
 			</tr>
 			<tr>
 				<td>JABATAN</td>
-				<td><select name="level_dosen">
+				<td><select name="level_dosen" class="form-control">
 				<option value="DOSEN">DOSEN</option>
 				<option value="REVIEWER">REVIEWER</option>
 				<option value="KORDINATOR">KORDINATOR</option>
