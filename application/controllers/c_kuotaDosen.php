@@ -8,18 +8,23 @@ class c_kuotaDosen extends CI_Controller{
     $tb_dosen = $this->db->get('tb_dosen');
     $data['num_rows'] = $tb_dosen->num_rows();
     $data['dosen']=$this->m_kuotaDosen->selectAll();
-    $this->load->view('header');
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
     $this->load->view('v_kuotaDosen',$data);
-    $this->load->view('footer');
-		
+    $this->load->view('template/footer');
+		if($this ->session ->userdata('level') != 1){
+
+      redirect(base_url('authentication/auth/login'));
+    }
 	}
 
   function editkuotaDosen($nip){
-    $this->load->view('header');
     $where = array('nip' => $nip);
     $data['dosen'] = $this->m_kuotaDosen->editkuotaDosen($where,'tb_dosen')->result();
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
     $this->load->view('v_editKuotaDosen',$data);
-    $this->load->view('footer');
+    $this->load->view('template/footer');
 }
 
 function update(){

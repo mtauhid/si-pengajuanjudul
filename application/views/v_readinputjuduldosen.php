@@ -1,31 +1,30 @@
-<?php
-/**
- * View untuk menampilkan daftar/list data (Read)
- * beserta dengan form yang memungkinkan pencarian data spesifik dengan kata kunci
- * 
- */
-?>
-<br/>
-<div class="container">
+<section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-table'></i>
+                      <span>Rekomendasi Judul</span>
+                    </h1>
+                    </div>
+                </div>
+              </div>
 
-    <div class="card">
-        <div class="card-body">
-            <form method="get" action="<?php echo site_url('/c_inputjuduldosen/') ?>" class="form-inline">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="search" id="search" placeholder="Kata Kunci Pencarian">
-                  </div>  
-                <button type="submit" class="btn btn-primary">Cari</button>
-            </form>
-        </div>
-    </div>
-
-    <br/>
-    <a class="btn btn-primary" href="<?php echo site_url('/c_inputjuduldosen/v_createinputjuduldosen') ?>" class="nav-link">Tambahkan Judul</a>
-    <br>
-    <br>
-    <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
-    <table class="table table-bordered">
-        <tr>
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='alert alert-info alert-dismissable'>
+                      <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                      Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong>
+                    </div>
+                    <div class='box-content box-no-padding'>
+                      <div class='responsive-table'>
+                        <div class='scrollable-area'>
+                          <table class='data-table table table-bordered table-striped' style='margin-bottom:0;'>
+                            <thead>
+                              <tr>
             <th>Id</th><th>Nip</th><th>Judul</th><th>Kuota</th>
             <th style="width: 1%;"> </th><th style="width: 1%;"> </th>
         </tr>
@@ -37,6 +36,9 @@
             echo '</tr>';
         }
         ?>
-    </table>
-
-</div>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>

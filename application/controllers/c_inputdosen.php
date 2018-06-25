@@ -24,9 +24,14 @@ class c_inputdosen extends CI_Controller {
         $tb_dosen = $this->db->get('tb_dosen');
         $data['result'] = $tb_dosen->result_array();
         $data['num_rows'] = $tb_dosen->num_rows();
-        $this->load->view('header');
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
         $this->load->view('v_readinputdosen', $data);
-        $this->load->view('footer');
+        $this->load->view('template/footer');
+        if($this ->session ->userdata('level') != 1){
+
+      redirect(base_url('authentication/auth/login'));
+    }
     }
 
     public function save()
@@ -48,27 +53,30 @@ class c_inputdosen extends CI_Controller {
 
     public function v_createinputdosen()
     {
-        $this->load->view('header');
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
         $this->load->view('v_createinputdosen');
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
     public function v_updateinputdosen($id)
     {
         $this->db->where('nip', $id);
         $data['update'] = $this->db->get('tb_dosen')->row_array();
-        $this->load->view('header');
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
         $this->load->view('v_createinputdosen', $data);
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
     public function v_deleteinputdosen($id)
     {
         $this->db->where('nip', $id);
         $data['v_deleteinputdosen'] = $this->db->get('tb_dosen')->row_array();
-        $this->load->view('header');
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
         $this->load->view('v_deleteinputdosen', $data);
-        $this->load->view('footer');
+        $this->load->view('template/footer');
     }
 
     public function real_delete()

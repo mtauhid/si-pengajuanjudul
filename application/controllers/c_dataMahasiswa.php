@@ -11,6 +11,10 @@ class c_dataMahasiswa extends CI_Controller{
 	function index(){
 		$data['tb_mahasiswa'] = $this->m_Mahasiswamodel->tampil_data()->result();
 		$this->load->view('v_tampildatamahasiswa',$data);
+		if($this ->session ->userdata('level') != 1){
+
+      redirect(base_url('authentication/auth/login'));
+    }
 	}
 
 	function tambah(){
