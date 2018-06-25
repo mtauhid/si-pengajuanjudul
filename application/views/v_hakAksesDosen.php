@@ -29,8 +29,8 @@
           <td style="text-align: center;"><?php echo $b->nip ?></td>
           <td><?php echo $b->nama_dosen ?></td>
           <td style="text-align: center;"><?php echo $b->prodi_dosen ?></td>
-          <td style="background-color: #f1f1f1;text-align: center;"><?php echo $b->level_dosen ?></td>
-          <td style="text-align: center;">
+          <td style="background-color: #f1f1f1;text-align: center;"><span class="badge badge-primary"><?php echo $b->level_dosen ?></span></td>
+          <td style="background-color: #f1f1f1;text-align: center;">
             <a href="<?php echo site_url('/c_hakAksesDosen/editHakAksesDosen/'.$b->nip)?>" class="btn btn-primary">Ubah</a>
           </td>
           </tr>
