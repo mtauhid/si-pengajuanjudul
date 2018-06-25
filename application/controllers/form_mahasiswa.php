@@ -9,7 +9,7 @@ class form_mahasiswa extends CI_Controller {
 	}
  
 	public function index(){		
-		$data['judul'] = "FORM INPUT JUDUL";
+		$data['judul'] = "SELAMAT DATANG DI SI MAHASISWA";
 		$this->load->view('v_inputjudulmhs',$data);
 	}
 	

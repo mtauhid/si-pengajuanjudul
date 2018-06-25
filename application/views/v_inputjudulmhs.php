@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>INPUT JUDUL MAHASISWA</title>	
+	<title>MAHASISWA</title>	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 </head>
 <body>
@@ -12,18 +12,16 @@
 			</hgroup>
 			<nav>
 				<ul>
-					<li><a href="<?php echo base_url().'index.php/web' ?>">Home</a></li>
-					<li><a href="<?php echo base_url().'index.php/web/about' ?>">About</a></li>
+					<li><a href="<?php echo base_url().'c_dataMahasiswa' ?>">data mahasiswa</a></li>
+					<li><a href="<?php echo base_url().'c_inputjudulmhs' ?>">input judul mahasiswa</a></li>
+					<li><a href="<?php echo base_url().'index.php/web' ?>">daftar judul dosen</a></li>
+					<li><a href="<?php echo base_url().'index.php/web' ?>">input judul fix</a></li>
+					<li><a href="<?php echo base_url().'index.php/web' ?>">pendaftaran sempro</a></li>
 				</ul>
 			</nav>
 			<div class="clear"></div>
 		</header>
-		<section>
-		<h1><?php echo $judul ?></h1>
-		<p>
-			
-		</p>
-		</section>
+		
 		<footer>						
 		
 		</footer>
