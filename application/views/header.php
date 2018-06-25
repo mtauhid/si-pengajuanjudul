@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href=".">SIPUL TUGAS AKHIR</a>
+  <a class="navbar-brand" href="<?php echo site_url('c_home') ?>">SIPUL TUGAS AKHIR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,7 +36,7 @@
         M Taufik Hidayat
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Keluar</a>
+        <a class="dropdown-item" href="<?php echo site_url('authentication/auth/logout'); ?>">Keluar</a>
       </div>
     </li>
     </ul>
