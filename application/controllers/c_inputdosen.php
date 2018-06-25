@@ -12,13 +12,14 @@ class c_inputdosen extends CI_Controller {
 
         
         // apakah ada pencarian data spesifik dengan kata kunci tertentu?
-        $search = $this->input->get('search');
-        if (!empty($search)) {
+        $search = $this->input->get('197104082001121003');
+        if (!empty($nip)) {
 
-            $this->db->like('nip', $search, 'both'); 
-            $this->db->or_like('nama_dosen', $search, 'both'); 
-            $this->db->or_like('prodi_dosen', $search, 'both'); 
-            $this->db->or_like('level_dosen', $search, 'both'); 
+            $this->db->like('nip', $nip, 'both'); 
+             $this->db->like('id_user', $id_user, 'both');
+            $this->db->or_like('nama_dosen', $nip, 'both'); 
+            $this->db->or_like('prodi_dosen', $nip, 'both'); 
+            $this->db->or_like('level_dosen', $nip, 'both'); 
         }
         $tb_dosen = $this->db->get('tb_dosen');
         $data['result'] = $tb_dosen->result_array();
@@ -31,6 +32,7 @@ class c_inputdosen extends CI_Controller {
     public function save()
     {
         $input['nip'] = $this->input->post('nip');
+        $input['id_user'] = $this->input->post('id_user');
         $input['nama_dosen'] = $this->input->post('nama_dosen');
         $input['prodi_dosen'] = $this->input->post('prodi_dosen');
         $input['level_dosen'] = $this->input->post('level_dosen');
