@@ -21,6 +21,11 @@
 
     <br/>
 
+    <a class="btn btn-primary" href="<?php echo site_url('/c_inputdosen/v_createinputdosen') ?>" class="nav-link">Tambah Data Dosen</a>
+
+    <br>
+    <br>
+
     <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
     <table class="table table-bordered">
         <tr>

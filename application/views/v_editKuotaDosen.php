@@ -19,6 +19,7 @@ foreach($dosen as $u){
                 	</td>
               	</div>
               	<button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <a class="btn btn-primary" href="<?php echo site_url('/c_kuotaDosen') ?>">Batal</a>
             </form>
         </div>
     </div>

@@ -23,9 +23,9 @@ class c_inputjuduldosen extends CI_Controller {
         $tb_rekomendasijudul = $this->db->get('tb_rekomendasijudul');
         $data['result'] = $tb_rekomendasijudul->result_array();
         $data['num_rows'] = $tb_rekomendasijudul->num_rows();
-        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('header');
         $this->load->view('v_readinputjuduldosen', $data);
-        $this->load->view('v_footinputjuduldosen');
+        $this->load->view('footer');
     }
 
     public function save()
@@ -46,27 +46,27 @@ class c_inputjuduldosen extends CI_Controller {
 
     public function v_createinputjuduldosen()
     {
-        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('header');
         $this->load->view('v_createinputjuduldosen');
-        $this->load->view('v_footinputjuduldosen');
+        $this->load->view('footer');
     }
 
     public function v_updateinputjuduldosen($id)
     {
         $this->db->where('id_judul', $id);
         $data['update'] = $this->db->get('tb_rekomendasijudul')->row_array();
-        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('header');
         $this->load->view('v_createinputjuduldosen', $data);
-        $this->load->view('v_footinputjuduldosen');
+        $this->load->view('footer');
     }
 
     public function v_deleteinputjuduldosen($id)
     {
         $this->db->where('id_judul', $id);
         $data['v_deleteinputjuduldosen'] = $this->db->get('tb_rekomendasijudul')->row_array();
-        $this->load->view('v_headinputjuduldosen');
+        $this->load->view('header');
         $this->load->view('v_deleteinputjuduldosen', $data);
-        $this->load->view('v_footinputjuduldosen');
+        $this->load->view('footer');
     }
 
     public function real_delete()

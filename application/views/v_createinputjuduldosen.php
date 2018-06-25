@@ -39,6 +39,7 @@ if (!isset($update)) {
                   echo $update_flag; 
                 } ?>
               <button type="submit" class="btn btn-primary">Save</button>
+              <a class="btn btn-primary" href="<?php echo site_url('/c_inputjuduldosen') ?>">Batal</a>
             </form>
         </div>
     </div>

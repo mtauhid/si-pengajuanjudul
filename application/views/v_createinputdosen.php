@@ -38,7 +38,7 @@ if (!isset($update)) {
               </div>
               <div class="form-group">
                 <label for="nama_judul">Prodi Dosen</label>
-                <td><select name="prodi_dosen">
+                <td><select name="prodi_dosen" class="form-control">
                   <option selected disabled>- Pilih Prodi</option>
                 <option value="MIF">MIF</option>
                 <option value="TIF">TIF</option>
@@ -48,7 +48,7 @@ if (!isset($update)) {
               </div>
               <div class="form-group">
                <label for="prodi_dosen">Hak Akses Dosen</label>
-               <td><select name="level_dosen">
+               <td><select name="level_dosen" class="form-control">
                 <option selected disabled>- Hak Akses Dosen</option>
                <option value="DOSEN">DOSEN</option>
                <option value="REVIEWER">REVIEWER</option>
@@ -60,6 +60,7 @@ if (!isset($update)) {
                   echo $update_flag; 
                 } ?>
               <button type="submit" class="btn btn-primary">Save</button>
+              <a class="btn btn-primary" href="<?php echo site_url('/c_inputdosen') ?>">Batal</a>
             </form>
         </div>
     </div>

@@ -7,13 +7,19 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="<?php echo site_url('/c_inputdosen/') ?>">SIPUL TUGAS AKHIR</a>
+  <a class="navbar-brand" href=".">SIPUL TUGAS AKHIR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="menu">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a href="<?php echo site_url('/c_inputdosen') ?>" class="nav-link">Data Dosen</a>
+      </li>
+      <li class="nav-item">
+        <a href="<?php echo site_url('/c_inputjuduldosen') ?>" class="nav-link">Input Judul</a>
+      </li>
       <li class="nav-item">
         <a href="<?php echo site_url('/c_hakAksesDosen') ?>" class="nav-link">Hak Akses</a>
       </li>
