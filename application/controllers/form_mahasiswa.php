@@ -11,10 +11,7 @@ class form_mahasiswa extends CI_Controller {
 	public function index(){		
 		$data['judul'] = "SELAMAT DATANG DI SI MAHASISWA";
 		$this->load->view('v_inputjudulmhs',$data);
-		if($this ->session ->userdata('level') != 1){
-
-      redirect(base_url('authentication/auth/login'));
-    }
+		
 	}
 	
  

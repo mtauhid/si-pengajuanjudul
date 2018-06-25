@@ -11,9 +11,7 @@ class bimbingan extends CI_Controller{
 		//memanggil function dari controller MY_Controller
  
   //validasi jika session dengan level tidak sesuai
-    if ($this->session->userdata('level') == "mahasiswa") {
-      redirect('mahasiswa/mahasiswa');
- }
+  
 	
 
 		//ngeload model ben iso di panggil

@@ -28,10 +28,7 @@ class c_inputdosen extends CI_Controller {
         $this->load->view('template/sidebar');
         $this->load->view('v_readinputdosen', $data);
         $this->load->view('template/footer');
-        if($this ->session ->userdata('level') != 1){
-
-      redirect(base_url('authentication/auth/login'));
-    }
+        
     }
 
     public function save()

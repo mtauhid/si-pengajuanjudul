@@ -12,10 +12,7 @@
             $this->load->view('template/sidebar');
         	$this->load->view('template/Dashboard');
         	$this->load->view('template/footer');
-            if($this ->session ->userdata('level') != 1){
-
-      redirect(base_url('authentication/auth/login'));
-    }
+            
         }
     }
 ?>

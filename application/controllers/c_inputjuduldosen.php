@@ -27,10 +27,7 @@ class c_inputjuduldosen extends CI_Controller {
         $this->load->view('template/sidebar');
         $this->load->view('v_readinputjuduldosen', $data);
         $this->load->view('template/footer');
-        if($this ->session ->userdata('level') != 1){
-
-      redirect(base_url('authentication/auth/login'));
-    }
+        
     }
 
     public function save()

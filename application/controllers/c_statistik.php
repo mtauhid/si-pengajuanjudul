@@ -6,10 +6,7 @@ class c_statistik extends CI_Controller{
        	$this->load->view('sidebar');
 		$this->load->view("v_statistik");
 		$this->load->view('footer');
-		if($this ->session ->userdata('level') != 1){
-
-      redirect(base_url('authentication/auth/login'));
-    }
+		
 	}
 }
 ?>

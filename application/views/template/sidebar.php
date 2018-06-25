@@ -50,15 +50,15 @@
               </a>
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='ui_elements.html'>
+                  <a href='<?php echo site_url('/c_dataMahasiswa') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Data Mahasiswa</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='widgets.html'>
+                  <a href='<?php echo site_url('/c_dataMahasiswa/tambah') ?>'>
                     <i class='icon-caret-right'></i>
-                    <span>Pengajuan Judul</span>
+                    <span>Tambah Data Mahasiswa</span>
                   </a>
                 </li>
                 <li class=''>

@@ -36,10 +36,10 @@ public function cekAkun(){
 
 public function login(){
 	//melakukan pengalihan halaman sesuai akses atau level user
-	if ($this->session->userdata('level') == "Mahasiswa"){redirect('c_home');}
-    if ($this->session->userdata('level') == "Dosen"){redirect('c_home');}
-	if ($this->session->userdata('level') == "Koordinator"){redirect('c_home');}
-	if ($this->session->userdata('level') == "Reviewer"){redirect('c_home');}
+	if ($this->session->userdata('level') == "Mahasiswa"){redirect('Dashboard');}
+    if ($this->session->userdata('level') == "Dosen"){redirect('Dashboard');}
+	if ($this->session->userdata('level') == "Koordinator"){redirect('Dashboard');}
+	if ($this->session->userdata('level') == "Reviewer"){redirect('Dashboard');}
 	
 	//Proses login dan validasi
 	if($this->input->post('submit')){
