@@ -17,6 +17,14 @@
 					<input type="hidden" name="nip" value="<?php echo $u->nip ?>">
 					<input type="text" name="nip" value="<?php echo $u->nip ?>">
 				</td>
+
+			</tr>
+			<tr>
+				<td>ID USER</td>
+				<td>
+					<input type="hidden" name="id_user" value="<?php echo $u->id_user ?>">
+					<input type="text" name="id_user" value="<?php echo $u->id_user ?>">
+				</td>
 			</tr>
 			<tr>
 				<td>NAMA DOSEN</td>

@@ -5,10 +5,11 @@
  */
 // periksa apakah kita sedang dalam mode 'Update'
 if (!isset($update)) {
-    $update = array('nip' => '', 'nama_dosen' => '', 'prodi_dosen' => '', 'level_dosen' => '');
+    $update = array('nip' => '', 'id_user' => '', 'nama_dosen' => '', 'prodi_dosen' => '', 'level_dosen' => '');
 } else {
     $update_flag = '<input type="hidden" name="updateID" value="'.$update['nip'].'">';
 }
+
 ?>
 <br/>
 <div class="container">
@@ -26,6 +27,10 @@ if (!isset($update)) {
               <div class="form-group">
                 <label for="nip">Nip</label>
                 <input type="text" class="form-control" name="nip" id="nip" value="<?php echo $update['nip'] ?>" placeholder="Nip">
+              </div>
+              <div class="form-group">
+                <label for="nip">ID User</label>
+                <input type="text" class="form-control" name="id_user" id="id_user" value="<?php echo $update['id_user'] ?>" placeholder="Isi Sesuai Nip">
               </div>
               <div class="form-group">
                 <label for="nama_dosen">Nama Dosen</label>
