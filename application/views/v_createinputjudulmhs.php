@@ -4,6 +4,7 @@
  * 
  */
 // periksa apakah kita sedang dalam mode 'Update'
+
 if (!isset($update)) {
     $update = array('id_judul' => '', 'id_dosen' => '','id_mahasiswa' => '', 'nama_judul' => '', 'ringkasan' => '','pembagian_tugas' => '','pengerjaan' => '');
 } else {
