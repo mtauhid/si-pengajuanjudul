@@ -1,7 +1,7 @@
 <?php 
 
 
-class bimbingan extends CI_Controller{
+class c_daftarbimbingan extends CI_Controller{
 	
 	//lihat
 		function __construct(){
@@ -10,16 +10,16 @@ class bimbingan extends CI_Controller{
 		//Cek Login
 		//memanggil function dari controller MY_Controller
  
-  //validasi jika session dengan level tidak sesuai
+  /*validasi jika session dengan level tidak sesuai
     if ($this->session->userdata('level') == "mahasiswa") {
       redirect('mahasiswa/mahasiswa');
- }
+    }*/
 	
 
 		//ngeload model ben iso di panggil
 
-		$this->load->model('M_Daftarbimbingan');
-		$this->load->model('M_Config');
+		$this->load->model('m_daftarbimbingan');
+		//$this->load->model('M_Config');
         $this->load->helper('url');
 
 		
@@ -30,18 +30,18 @@ class bimbingan extends CI_Controller{
 		
 		
 		
-		$Dospem = array('Dospem' =>$this->session->userdata('nama'));
+		$nip = array('nip' =>$this->session->userdata('id_user'));
 		//pengaturan pagination tabel dan view nya
 		$this->load->database();
-		$jumlah_data = $this->M_Daftarbimbingan->Pagejumlah_bimbingan('table_ta');
+		$jumlah_data = $this->m_daftarbimbingan->Pagejumlah_bimbingan('tb_judul');
 		$this->load->library('pagination');
-		$config['base_url'] = base_url().'dosen/DaftarPenelitian/index';
+		$config['base_url'] = base_url().'c_daftarbimbingan/v_daftarbimbingan/index';
 		$config['total_rows'] = $jumlah_data;
 		$config['per_page'] = 5;
 		$from = $this->uri->segment(4);
 		$this->pagination->initialize($config);		
-		$data['table_ta'] = $this->M_Daftarbimbingan->Pagedata_bimbingan('table_ta',$Dospem,$config['per_page'],$from);
-		$this->load->view('dosen/DaftarBimbingan',$data);
+	    $data['tb_judul'] = $this->m_daftarbimbingan->Pagedata_bimbingan('tb_judul',$nip,$config['per_page'],$from);
+		$this->load->view('v_daftarbimbingan',$data);
 		
 		/*
 		$where = array('id_user' =>$this->session->userdata('username'));
@@ -50,41 +50,43 @@ class bimbingan extends CI_Controller{
 		*/
 	}
 
+
+
 	
-	//Tambah
+	/*Tambah
 	function kirimbaru(){
 		//manggil dosen
 		
 		$this->load->view('dosen/Judul-Baru');
 		
-	}
+	}*/
 
 	
 //menolak sebagai pembimbing
-	function tolak($id){
-	$where = array('id' => $id);
+	function tolak($id_judul){
+	$where = array('id_judul' => $id_judul);
 
 	$data = array(
-			'Status_pembimbing' =>"Di Tolak"
+			'status' =>"Di Tolak"
 			);
 
-	$this->M_Daftarbimbingan->update_data($where,$data,'table_ta');
-	redirect('dosen/bimbingan');
+	$this->m_daftarbimbingan->update_data($where,$data,'tb_judul');
+	redirect('c_daftarbimbingan/v_daftarbimbingan');
 }
 
 	//memnerima sebagai pembimbing
-	function Terima($id){	
+	function Terima($id_judul){	
 	
 	
-	$where = array('id' => $id);
+	$where = array('id_judul' => $id_judul);
 	$data = array(
-			'Status_pembimbing' =>"Di Terima"
+			'status' =>"Di Terima"
 			);
-	$this->M_Daftarbimbingan->update_data($where,$data,'table_ta');
-	redirect('dosen/bimbingan');
+	$this->m_daftarbimbingan->update_data($where,$data,'tb_judul');
+	redirect('c_daftarbimbingan/v_daftarbimbingan');
+}
+
 }
 
 
-
-}
 ?>

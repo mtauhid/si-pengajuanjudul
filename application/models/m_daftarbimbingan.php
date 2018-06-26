@@ -1,7 +1,7 @@
 <?php
   defined('BASEPATH') OR exit('No direct script access allowed');
  
-  class M_Daftarbimbingan extends CI_Model{
+  class m_daftarbimbingan extends CI_Model{
 
   //pageinaton dan view tabel
   function Pagedata_bimbingan($table,$where,$number,$offset){
