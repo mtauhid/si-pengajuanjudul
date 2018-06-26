@@ -63,27 +63,27 @@ class c_daftarbimbingan extends CI_Controller{
 
 	
 //menolak sebagai pembimbing
-	function tolak($id_judul){
-	$where = array('id_judul' => $id_judul);
+	function tolak($nip){
+	$where = array('nip' => $nip);
 
 	$data = array(
 			'status' =>"Di Tolak"
 			);
 
 	$this->m_daftarbimbingan->update_data($where,$data,'tb_judul');
-	redirect('c_daftarbimbingan/v_daftarbimbingan');
+	redirect('c_daftarbimbingan');
 }
 
 	//memnerima sebagai pembimbing
-	function Terima($id_judul){	
+	function Terima($nip){	
 	
 	
-	$where = array('id_judul' => $id_judul);
+	$where = array('nip' => $nip);
 	$data = array(
 			'status' =>"Di Terima"
 			);
 	$this->m_daftarbimbingan->update_data($where,$data,'tb_judul');
-	redirect('c_daftarbimbingan/v_daftarbimbingan');
+	redirect('c_daftarbimbingan');
 }
 
 }

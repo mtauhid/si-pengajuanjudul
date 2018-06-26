@@ -22,16 +22,16 @@
 		</tr>
 		<?php 
 		$no = $this->uri->segment('3') + 1;
-		foreach($table_ta as $u){ 
+		foreach($tb_judul as $u){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
 			<td>
-			      <?php echo anchor('dosen/bimbingan/terima/'.$u->id,'terima'); ?>
-                  <?php echo anchor('dosen/bimbingan/tolak/'.$u->id,'tolak'); ?>
+			      <?php echo anchor('c_daftarbimbingan/terima/'.$u->nip,'terima'); ?>
+                  <?php echo anchor('c_daftarbimbingan/tolak/'.$u->nip,'tolak'); ?>
 			</td>
 			
-			<td><?php echo $u->id_judul ?></td>
+			
 			<td><?php echo $u->nip?></td>
 			<td><?php echo $u->nim ?></td>
 			<td><?php echo $u->nama_judul ?></td>
