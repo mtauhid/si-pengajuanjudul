@@ -26,9 +26,7 @@ class c_inputjudulmhs extends CI_Controller {
         $tb_judul = $this->db->get('tb_judul');
         $data['result'] = $tb_judul->result_array();
         $data['num_rows'] = $tb_judul->num_rows();
-        $this->load->view('header');
         $this->load->view('v_readinputjudulmhs', $data);
-        $this->load->view('footer');
     }
 
     public function save()
@@ -47,32 +45,26 @@ class c_inputjudulmhs extends CI_Controller {
         } else {
             $this->db->insert('tb_judul', $input);
         }
-        redirect('/c_inputjudulmhs/index');
+        redirect('si-pengajuanjudul/c_inputjudulmhs/index');
     }
 
     public function v_createinputjudulmhs()
     {
-        $this->load->view('header');
         $this->load->view('v_createinputjudulmhs');
-        $this->load->view('footer');
     }
 
     public function v_updateinputjudulmhs($id)
     {
         $this->db->where('id_judul', $id);
         $data['update'] = $this->db->get('tb_judul')->row_array();
-        $this->load->view('header');
         $this->load->view('v_createinputjudulmhs', $data);
-        $this->load->view('footer');
     }
 
     public function v_deleteinputjudulmhs($id)
     {
         $this->db->where('id_judul', $id);
-        $data['v_deleteinputjudulmhs'] = $this->db->get('tb_mhsjudul')->row_array();
-        $this->load->view('header');
+        $data['v_deleteinputjudulmhs'] = $this->db->get('tb_judul')->row_array();
         $this->load->view('v_deleteinputjudulmhs', $data);
-        $this->load->view('footer');
     }
 
     public function real_delete()
@@ -80,6 +72,6 @@ class c_inputjudulmhs extends CI_Controller {
         $id = $this->input->post('id_judul');
         $this->db->where('id_judul', $id);
         $this->db->delete('tb_judul');
-        redirect('/c_inputjudulmhs/');
+        redirect('si-pengajuanjudul/c_inputjudulmhs/');
     }
 }

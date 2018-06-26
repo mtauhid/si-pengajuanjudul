@@ -10,7 +10,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form method="get" action="<?php echo site_url('/c_inputjudulmhs/') ?>" class="form-inline">
+            <form method="get" action="<?php echo site_url('si-pengajuanjudul/c_inputjudulmhs/') ?>" class="form-inline">
                 <div class="form-group">
                     <input type="text" class="form-control" name="search" id="search" placeholder="Kata Kunci Pencarian">
                   </div>  
@@ -20,7 +20,7 @@
     </div>
 
     <br/>
-    <a class="btn btn-primary" href="<?php echo site_url('/c_inputjudulmhs/v_createinputjudulmhs') ?>" class="nav-link">Tambahkan Judul</a>
+    <a class="btn btn-primary" href="<?php echo site_url('si-pengajuanjudul/c_inputjudulmhs/v_createinputjudulmhs') ?>" class="nav-link">Tambahkan Judul</a>
     <br>
     <br>
     <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
@@ -31,9 +31,9 @@
         </tr>
         <?php foreach ($result as $r) {
             echo '<tr>';
-            echo '<td>'.$r['id_judul'].'</td><td>'.$r['id_dosen'].'</td><td>'.$r['id_dosen'].'</td><td>'.$r['id_mahasiswa'].'</td><td>'.$r['nama_judul'].'</td><td>'.$r['ringkasan'].'</td><td>'.$r['pembagian_tugas'].'</td><td>'.$r['pengerjaan'].'</td>';
-            echo '<td><a href="'.site_url('/c_inputjudulmhs/v_updateinputjudulmhs/'.$r['id_judul']).'" class="btn btn-primary">Edit</a></td>';
-            echo '<td><a href="'.site_url('/c_inputjudulmhs/v_deleteinputjudulmhs/'.$r['id_judul']).'" class="btn btn-danger">Delete</a></td>';
+            echo '<td>'.$r['id_judul'].'</td><td>'.$r['id_dosen'].'</td><td>'.$r['id_mahasiswa'].'</td><td>'.$r['nama_judul'].'</td><td>'.$r['ringkasan'].'</td><td>'.$r['pembagian_tugas'].'</td><td>'.$r['pengerjaan'].'</td>';
+            echo '<td><a href="'.site_url('si-pengajuanjudul/c_inputjudulmhs/v_updateinputjudulmhs/'.$r['id_judul']).'" class="btn btn-primary">Edit</a></td>';
+            echo '<td><a href="'.site_url('si-pengajuanjudul/c_inputjudulmhs/v_deleteinputjudulmhs/'.$r['id_judul']).'" class="btn btn-danger">Delete</a></td>';
             echo '</tr>';
         }
         ?>
