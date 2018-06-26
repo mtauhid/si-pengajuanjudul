@@ -26,7 +26,7 @@
     <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
     <table class="table table-bordered">
         <tr>
-            <th>Id Judul</th><th>Id dosen</th><th>Id Mahasiswa</th><th></th><th>Judul</th><th>Ringkasan</th><th>Pembagian Tugas</th><th>Pengerjaan</th>
+            <th>Id Judul</th><th>Id dosen</th><th>Id Mahasiswa</th><th></th><th>Judul</th><th>Ringkasan</th><th>Pembagian Tugas</th><th>Pengerjaan</th><th>Aksi</th>
             <th style="width: 1%;"> </th><th style="width: 1%;"> </th>
         </tr>
         <?php foreach ($result as $r) {
