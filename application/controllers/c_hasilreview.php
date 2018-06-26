@@ -23,6 +23,7 @@ class c_hasilreview extends CI_Controller {
 		$this->load->model('M_komentar');
 		$this->data['hasil'] = $this->M_komentar->getReview('tb_judul_usulan');
 		$this->load->view('v_komentar', $this->data);
+		
 	}
 	public function form_terima(){
 		$this->load->view('form_terima');

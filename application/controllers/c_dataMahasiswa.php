@@ -10,12 +10,19 @@ class c_dataMahasiswa extends CI_Controller{
  
 	function index(){
 		$data['tb_mahasiswa'] = $this->m_Mahasiswamodel->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
 		$this->load->view('v_tampildatamahasiswa',$data);
+		$this->load->view('template/footer');
+		
 	}
 
 	function tambah(){
-		
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
 		$this->load->view('v_inputmahasiswa');
+		$this->load->view('template/footer');
+		
 	}
 
 	function tambah_aksi(){
@@ -46,7 +53,11 @@ class c_dataMahasiswa extends CI_Controller{
 	public function edit($nim){
 		$where = array('nim' => $nim);
 		$data['tb_mahasiswa'] = $this->m_Mahasiswamodel->edit_data($where,'tb_mahasiswa')->result();
+		
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
 		$this->load->view('v_editmahasiswa',$data);
+		$this->load->view('template/footer');
 	}
 
 	function update(){

@@ -1,38 +1,35 @@
-<?php
-/**
- * View untuk menampilkan daftar/list data (Read)
- * beserta dengan form yang memungkinkan pencarian data spesifik dengan kata kunci
- * 
- */
-?>
-<br/>
-<div class="container">
+<section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-table'></i>
+                      <span>Data Dosen</span>
+                    </h1>
+                    </div>
+                </div>
+              </div>
 
-    <div class="card">
-        <div class="card-body">
-            <form method="get" action="<?php echo site_url('/c_inputdosen/') ?>" class="form-inline">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="search" id="search" placeholder="Kata Kunci Pencarian">
-                  </div>  
-                <button type="submit" class="btn btn-primary">Cari</button>
-            </form>
-        </div>
-    </div>
-
-    <br/>
-
-    <a class="btn btn-primary" href="<?php echo site_url('/c_inputdosen/v_createinputdosen') ?>" class="nav-link">Tambah Data Dosen</a>
-
-    <br>
-    <br>
-
-    <div class="alert alert-info">Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong></div>
-    <table class="table table-bordered">
-        <tr>
-            <th>Nip</th><th>ID User</th><th>Nama Dosen</th><th>Prodi Dosen</th><th>Jabatan</th>
-            <th style="width: 1%;"> </th><th style="width: 1%;"> </th>
-        </tr>
-        <?php foreach ($result as $r) {
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div class='alert alert-info alert-dismissable'>
+                      <a class='close' data-dismiss='alert' href='#'>&times;</a>
+                      Ditemukan data dalam jumlah <strong><?php echo $num_rows ?></strong>
+                    </div>
+                    <div class='box-content box-no-padding'>
+                      <div class='responsive-table'>
+                        <div class='scrollable-area'>
+                          <table class='data-table table table-bordered table-striped' style='margin-bottom:0;'>
+                            <thead>
+                              <tr>
+                                <th>Nip</th><th>ID User</th><th>Nama Dosen</th><th>Prodi Dosen</th><th>Jabatan</th>
+            <th colspan="2" style="width: 1%;"> </th>
+                              </tr>
+                            </thead>
+                            <?php foreach ($result as $r) {
             echo '<tr>';
             echo '<td>'.$r['nip'].'</td><td>'.$r['id_user'].'</td><td>'.$r['nama_dosen'].'</td><td>'.$r['prodi_dosen'].'</td><td>'.$r['level_dosen'].'</td>';
             echo '<td><a href="'.site_url('/c_inputdosen/v_updateinputdosen/'.$r['nip']).'" class="btn btn-primary">Edit</a></td>';
@@ -40,6 +37,9 @@
             echo '</tr>';
         }
         ?>
-    </table>
-
-</div>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>

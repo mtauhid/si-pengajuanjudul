@@ -11,6 +11,7 @@ class Dosen extends CI_Controller{
 	function index(){
 		$data['tb_dosen'] = $this->m_datadosen->tampil_data()->result();
 		$this->load->view('v_tampildosen',$data);
+		
 	}
 
 	function tambah(){

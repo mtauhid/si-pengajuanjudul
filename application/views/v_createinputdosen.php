@@ -1,4 +1,18 @@
-<?php
+<section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-table'></i>
+                      <span>Tambah Data Dosen</span>
+                    </h1>
+                    </div>
+                </div>
+              </div>
+              <?php
 /**
  * View untuk form penambahan (Create) data dan sekaligus pengubahan (Update) data
  * 
@@ -11,16 +25,12 @@ if (!isset($update)) {
 }
 
 ?>
-<br/>
-<div class="container">
-
-    <?php if (isset($update_flag)) { 
-        echo '<div class="alert alert-info">Anda akan mengubah data dosen <strong>'.$update['nama_dosen'].'</strong></div>';
-      } ?>
-    <div class="card">
-        
-        <div class="card-body">
-            <form method="post" action="<?php echo site_url('/c_inputdosen/save') ?>">
+              <div class='row'>
+                <div class='col-sm-12'>
+                  
+                  <div class='box'>
+                            
+                            <form method="post" action="<?php echo site_url('/c_inputdosen/save') ?>">
               <div class="form-group">
              
               </div>
@@ -62,7 +72,8 @@ if (!isset($update)) {
               <button type="submit" class="btn btn-primary">Save</button>
               <a class="btn btn-primary" href="<?php echo site_url('/c_inputdosen') ?>">Batal</a>
             </form>
-        </div>
-    </div>
-
-</div>
+              
+                    </div>
+                  
+                </div>
+              </div>

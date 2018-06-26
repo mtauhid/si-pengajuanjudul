@@ -4,7 +4,7 @@
         <div class='navigation'>
           <ul class='nav nav-stacked'>
             <li class='active'>
-              <a href='index-2.html'>
+              <a href='<?php echo site_url('Dashboard') ?>'>
                 <i class='icon-dashboard'></i>
                 <span>Dashboard</span>
               </a>
@@ -17,27 +17,27 @@
       
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='c_inputDosen'>
+                  <a href='<?php echo site_url('c_inputdosen') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Data Dosen</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='c_inputJudulDosen'>
+                  <a href='<?php echo site_url('/c_inputdosen/v_createinputdosen') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Tambah Data Dosen</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='<?php echo site_url('c_inputjuduldosen') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Rekomendasi Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='c_hakAksesDosen'>
+                  <a href='<?php echo site_url('/c_inputjuduldosen/v_createinputjuduldosen') ?>'>
                     <i class='icon-caret-right'></i>
-                    <span>Hak Akses</span>
-                  </a>
-                </li>
-                <li class=''>
-                  <a href='wizard.html'>
-                    <i class='icon-caret-right'></i>
-                    <span>Pengajuan Judul Mahasiswa</span>
+                    <span>Tambah Rekomendasi Judul</span>
                   </a>
                 </li>
               </ul>
@@ -50,15 +50,15 @@
               </a>
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='ui_elements.html'>
+                  <a href='<?php echo site_url('/c_dataMahasiswa') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Data Mahasiswa</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='widgets.html'>
+                  <a href='<?php echo site_url('/c_dataMahasiswa/tambah') ?>'>
                     <i class='icon-caret-right'></i>
-                    <span>Pengajuan Judul</span>
+                    <span>Tambah Data Mahasiswa</span>
                   </a>
                 </li>
                 <li class=''>
@@ -68,6 +68,18 @@
                   </a>
                 </li>
               </ul>
+            </li>
+            <li class=''>
+              <a href='<?php echo base_url("c_hakAksesDosen"); ?>'>
+                <i class='icon-bar-chart'></i>
+                <span>Hak Akses Dosen</span>
+              </a>
+            </li>
+            <li class=''>
+              <a href='<?php echo base_url("c_kuotaDosen"); ?>'>
+                <i class='icon-bar-chart'></i>
+                <span>Kuota Dosen</span>
+              </a>
             </li>
             <li class=''>
               <a href='buttons_and_icons.html'>

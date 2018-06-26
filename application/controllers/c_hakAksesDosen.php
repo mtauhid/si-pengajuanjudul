@@ -8,18 +8,21 @@ class c_hakAksesDosen extends CI_Controller{
     $tb_dosen = $this->db->get('tb_dosen');
     $data['num_rows'] = $tb_dosen->num_rows();
     $data['dosen']=$this->m_hakAksesDosen->selectAll();
-    $this->load->view('header');
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
     $this->load->view('v_hakAksesDosen',$data);
-    $this->load->view('footer');
+    $this->load->view('template/footer');
+    
 		
 	}
 
   function editHakAksesDosen($nip){
-    $this->load->view('header');
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
     $where = array('nip' => $nip);
     $data['dosen'] = $this->m_hakAksesDosen->editHakAksesDosen($where,'tb_dosen')->result();
     $this->load->view('v_editHakAksesDosen',$data);
-    $this->load->view('footer');
+    $this->load->view('template/footer');
 }
 
 function update(){

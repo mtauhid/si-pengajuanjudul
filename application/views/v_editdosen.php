@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>INPUT DOSEN</title>
-</head>
-<body>
-	<center>
-		<h1>INPUT JUDUL OLEH DOSEN</h1>
-		<h3>Edit Data</h3>
-	</center>
 	<?php foreach($tb_dosen as $u){ ?>
 	<form action="<?php echo base_url(). 'dosen/update'; ?>" method="post">
 		<table style="margin:20px auto;">
@@ -53,5 +43,3 @@
 		</table>
 	</form>	
 	<?php } ?>
-</body>
-</html>
