@@ -40,7 +40,7 @@
       <td><?php echo $u->pembagian_tugas ?></td>
       <td><?php echo $u->pengerjaan ?></td>
       <td><?php echo $u->status ?></td>
-      <td><?php echo $u->masukan ?></td>
+      <td><?php echo $u->komentar ?></td>
   
       
       

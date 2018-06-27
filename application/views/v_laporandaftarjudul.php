@@ -4,8 +4,8 @@
   </head>
   <body>
   <!--Scrpit prnint -->
-   <a>Gunakan Browser Google Chrome Agar Performa lebih maksimal</a><br>
- <button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button>
+   <a><center>Gunakan Browser Google Chrome Agar Performa lebih maksimal</center></a><br>
+ <center><button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button></center>
 <button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button>
   <div id="print">
       <center>

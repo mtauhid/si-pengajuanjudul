@@ -41,6 +41,7 @@ class c_laporan extends CI_Controller{
 		$from = $this->uri->segment(4);
 		$this->pagination->initialize($config);		
 		$data['tb_judul'] = $this->m_laporan->PageReview_judul('tb_judul',$config['per_page'],$from);
+		
 		$this->load->view('v_laporandaftarjudul',$data);
 	
 	}
