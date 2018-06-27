@@ -5,8 +5,8 @@
   <body>
   <!--Scrpit prnint -->
    <a><center>Gunakan Browser Google Chrome Agar Performa lebih maksimal</center></a><br>
- <center><button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button></center>
-<button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button>
+ <center><button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button>
+<button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button></center>
   <div id="print">
       <center>
         <h2>Laporan Daftar Usulan Tugas Akhir  </h2>
@@ -27,7 +27,7 @@
 			<th>Ringkasan</th>
 			<th>Pembagian Tugas</th>
 			<th>Pengerjaan</th>
-			<th>Status</th>
+			
 			
 		</tr>
 		<?php 
@@ -41,7 +41,7 @@
 			<td><?php echo $u->ringkasan ?></td>
 			<td><?php echo $u->pembagian_tugas ?></td>
 			<td><?php echo $u->pengerjaan ?></td>
-			<td><?php echo $u->status ?></td>
+			
 			
 		</tr>
 		<?php } ?>

@@ -10,7 +10,7 @@
   <table style="margin:20px auto;" border="1">
     <tr>
       <th>No</th>
-      <th>Aksi</th>
+      <th>Opsi</th>
       <th>NIP</th>
       <th>NIM</th>
       <th>Judul</th>
@@ -19,6 +19,7 @@
       <th>Pengerjaan</th>
       <th>Status</th>
       <th>Masukan</th>
+      <th>
       
     </tr>
     <?php 
