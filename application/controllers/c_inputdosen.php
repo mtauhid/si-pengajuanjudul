@@ -16,7 +16,7 @@ class c_inputdosen extends CI_Controller {
         if (!empty($nip)) {
 
             $this->db->like('nip', $nip, 'both'); 
-             $this->db->like('id_user', $id_user, 'both');
+            $this->db->like('id_user', $id_user, 'both');
             $this->db->or_like('nama_dosen', $nip, 'both'); 
             $this->db->or_like('prodi_dosen', $nip, 'both'); 
             $this->db->or_like('level_dosen', $nip, 'both'); 
