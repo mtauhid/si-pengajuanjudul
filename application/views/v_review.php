@@ -10,7 +10,7 @@
   <table style="margin:20px auto;" border="1">
     <tr>
       <th>No</th>
-      <th>aksi</th>
+      <th>Aksi</th>
       <th>NIP</th>
       <th>NIM</th>
       <th>Judul</th>
@@ -28,8 +28,8 @@
     <tr>
       <td><?php echo $no++ ?></td>
       <td>
-            <?php echo anchor('c_review/terima/'.$u->nip,'terima'); ?>
-                  <?php echo anchor('c_review/tolak/'.$u->nip,'tolak'); ?>
+            <?php echo anchor('c_review/terima/'.$u->id_judul,'terima'); ?>
+                  <?php echo anchor('c_review/tolak/'.$u->id_judul,'tolak'); ?>
       </td>
       
       
