@@ -9,24 +9,20 @@
 <button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button></center>
   <div id="print">
       <center>
-        <h2>Laporan Daftar Usulan Tugas Akhir  </h2>
-		<h2>Jurusan Teknik informatika politeknik negeri jember tahun 
-		<?php $mydate=getdate(date("U"));
-			  echo " $mydate[year]";
-		?>  
-		</h2>
+        <h2>BUKTI BIMBINGAN  </h2>
 	   </center>
 	
 	
 	
 	<table style="margin:20px auto;" border="1">
 		<tr>
-		    <tr><th>No : </th>
-		    <th>NIM :</th>
-			<th>Nama Judul :</th>
-			<th>Ringkasan :</th>
-			<th>Pembagian Tugas :</th>
-			<th>Pengerjaan :</th>
+		    <tr><th>No</th>
+		    <th>NIM </th>
+		    <th>NIP</th>
+			<th>Nama Judul</th>
+			<th>Ringkasan</th>
+			<th>Pembagian Tugas </th>
+			<th>Pengerjaan </th>
 			
 			</tr>
 		
@@ -36,7 +32,8 @@
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-		 	<td><?php echo $u->nim ?></td>
+		 <td><?php echo $u->nim ?></td>
+		  <td><?php echo $u->nip ?></td>
 		 <td><?php echo $u->nama_judul ?></td>
 		<td><?php echo $u->ringkasan ?></td>
 		<td><?php echo $u->pembagian_tugas ?></td>

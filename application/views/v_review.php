@@ -7,7 +7,7 @@
     <br>
     <br>
   
-  <table style="margin:20px auto;" border="1">
+ 
     <tr>
       <th>No</th>
       <th>Opsi</th>

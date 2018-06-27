@@ -5,12 +5,11 @@
 
   //pageinaton dan view tabel
   function PageReview_judul ($table,$number,$offset){
-		
 		return $query = $this->db->get($table,$number,$offset)->result();		
 	}		
 
 	function Pagejumlah_KirimJudul($table){
-		return $this->db->get($table)->num_rows();
+	    $this->db->get($table)->num_rows();
 	}
  
 	function input_data($data,$table){
