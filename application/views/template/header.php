@@ -43,7 +43,7 @@
         <ul class='nav'>
           <li class='dropdown dark user-menu'>
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <img width="23" height="23" alt="Mila Kunis" src="<?php echo base_url(); ?>assets/images/avatar.jpg" />
+              <img width="23" height="23" alt="<?php echo base_url(); ?>" src="<?php echo base_url(); ?>assets/images/avatar.jpg" />
               <span class='user-name'><?php echo $this->session->userdata('id_user');?></span>
               <b class='caret'></b>
             </a>

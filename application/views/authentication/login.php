@@ -3,7 +3,7 @@
   
 <!-- Mirrored from www.bublinastudio.com/flattybs3/sign_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 12:17:27 GMT -->
 <head>
-    <title>Sign in | Flatty - Flat Administration Template</title>
+    <title>SI PENGAJUAN JUDUL TUGAS AKHIR</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta content='text/html;charset=utf-8' http-equiv='content-type'>
     <meta content='Flat administration template for Twitter Bootstrap. Twitter Bootstrap 3 template with Ruby on Rails support.' name='description'>
