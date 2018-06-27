@@ -20,7 +20,7 @@ if (!isset($update)) {
     <div class="card">
         
         <div class="card-body">
-            <form method="post" action="<?php echo site_url('si-pengajuanjudul/c_inputjudulmhs/save') ?>">
+            <form method="post" action="<?php echo site_url('c_inputjudulmhs/save') ?>">
               <div class="form-group">
              
               </div>
@@ -56,7 +56,7 @@ if (!isset($update)) {
                   echo $update_flag; 
                 } ?>
               <button type="submit" class="btn btn-primary">Save</button>
-              <a class="btn btn-primary" href="<?php echo site_url('si-pengajuanjudul/c_inputjudulmhs') ?>">Batal</a>
+              <a class="btn btn-primary" href="<?php echo site_url('c_inputjudulmhs') ?>">Batal</a>
             </form>
         </div>
     </div>

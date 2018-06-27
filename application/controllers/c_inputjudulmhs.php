@@ -45,7 +45,7 @@ class c_inputjudulmhs extends CI_Controller {
         } else {
             $this->db->insert('tb_judul', $input);
         }
-        redirect('si-pengajuanjudul/c_inputjudulmhs/index');
+        redirect('c_inputjudulmhs/index');
     }
 
     public function v_createinputjudulmhs()
@@ -72,6 +72,6 @@ class c_inputjudulmhs extends CI_Controller {
         $id = $this->input->post('id_judul');
         $this->db->where('id_judul', $id);
         $this->db->delete('tb_judul');
-        redirect('si-pengajuanjudul/c_inputjudulmhs/');
+        redirect('c_inputjudulmhs/');
     }
 }

@@ -12,8 +12,8 @@
 			</hgroup>
 			<nav>
 				<ul>
-					<li><a href="<?php echo base_url().'si-pengajuanjudul/c_dataMahasiswa' ?>">data mahasiswa</a></li>
-					<li><a href="<?php echo base_url().'si-pengajuanjudul/c_inputjudulmhs' ?>">input judul mahasiswa</a></li>
+					<li><a href="<?php echo base_url().'c_dataMahasiswa' ?>">data mahasiswa</a></li>
+					<li><a href="<?php echo base_url().'c_inputjudulmhs' ?>">input judul mahasiswa</a></li>
 					<li><a href="<?php echo base_url().'index.php/web' ?>">daftar judul dosen</a></li>
 					<li><a href="<?php echo base_url().'index.php/web' ?>">input judul fix</a></li>
 					<li><a href="<?php echo base_url().'index.php/web' ?>">pendaftaran sempro</a></li>
