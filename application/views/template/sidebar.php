@@ -239,13 +239,13 @@
               </a>
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_inputjudulmhs'>
                     <i class='icon-caret-right'></i>
                     <span>Pengajual Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_inputjudulmhsfinal'>
                     <i class='icon-caret-right'></i>
                     <span>Pengajual Judul Final</span>
                   </a>
