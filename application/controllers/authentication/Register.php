@@ -9,7 +9,6 @@
          $this->load->helper(array('url','form'));
          $this->load->model('M_account'); //call model
 		 $this->load->model('M_Config');
-		 $this->load->model('M_Grafik');
         
      }
  
@@ -24,37 +23,41 @@
         
 		 //jika validasi form salah
 		if($this->form_validation->run() == FALSE) {
-			$this->load->view('header');
-             $this->load->view('authentication/v_register');
-			 $this->load->view('footer');
+             $this->load->view('authentication/V_register');
          }else{
 			//input ke database user
-             $data['nama']    =   		  $this->input->post('name');
-             $data['id_user'] =   		  $this->input->post('username');
-             $data['prodi']   =    	 	  $this->input->post('prodi');
-			 $data['golongan']  =    	  $this->input->post('golongan');
-             $data['password']  =     md5($this->input->post('password'));
-			 $data['level']  =    	  	  "mahasiswa";
-			 $data['active']  =    	  	  "1";
+			$data['id_user'] =   		  $this->input->post('username');
+            $data['nama']    =   		  $this->input->post('name');
+            $data['prodi']   =    	 	  $this->input->post('prodi');
+			$data['golongan']  =    	  $this->input->post('golongan');
+			$data['semester']   =  $this->input->post('semester');
+            $data['password']  =     md5($this->input->post('password'));
+			$data['level']  =    	  	  "Mahasiswa";
+			$data['active']  =    	  	  "1";
+
+			$data2['nim'] =  $this->input->post('username');
+            $data2['nama_mahasiswa']    =  $this->input->post('name');
+            $data2['prodi_mahasiswa']   =  $this->input->post('prodi');
+            $data2['gol_mahasiswa']   =  $this->input->post('golongan');
+            $data2['semester']   =  $this->input->post('semester');
  
-             $this->M_account->daftar($data);
+             $this->M_account->daftar($data,$data2);
 			 
 	
 			 
              $pesan['message'] =    "Pendaftaran berhasil";
-             $this->load->view('notification/DaftarSukses');
+             redirect('authentication/auth/login');
          }
      }
 	 //link tok 
 	  public function newuser () {
 	
 	//Option
+	/*
 	$data['golongan'] = $this->M_Config->tampilgolongan();
 	$data['prodi'] = $this->M_Config->tampilProdi();
-	
-	$this->load->view('header');            
-    $this->load->view('authentication/v_register',$data);
-    $this->load->view('footer');
+	*/           
+    $this->load->view('authentication/V_Register');
   }
  
 	 
