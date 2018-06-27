@@ -1,8 +1,27 @@
-<?php
+<section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-table'></i>
+                      <span>Hapus Rekomendasi Judul</span>
+                    </h1>
+                    </div>
+                </div>
+              </div>
+              <?php
 /**
  * View untuk proses konfirmasi penghapusan data (Delete)
  * 
  */
+if (!isset($update)) {
+    $update = array('id_judul' => '', 'nip' => '','nim' => '', 'nama_judul' => '', 'ringkasan' => '','pembagian_tugas' => '','pengerjaan' => '','status' => '','komentar' => '');
+} else {
+    $update_flag = '<input type="hidden" name="updateID" value="'.$update['id_judul'].'">';
+}
 ?>
 <br />
 <div class="container">s
