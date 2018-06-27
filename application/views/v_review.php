@@ -29,8 +29,8 @@
     <tr>
       <td><?php echo $no++ ?></td>
       <td>
-            <?php echo anchor('c_review/terima/'.$u->nip,'terima'); ?>
-                  <?php echo anchor('c_review/tolak/'.$u->nip,'tolak'); ?>
+            <?php echo anchor('c_review/terima/'.$u->id_judul,'terima'); ?>
+                  <?php echo anchor('c_review/tolak/'.$u->id_judul,'tolak'); ?>
       </td>
       
       
