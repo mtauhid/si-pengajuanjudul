@@ -65,8 +65,8 @@ class c_review extends CI_Controller{
 
 	
 //menolak sebagai pembimbing
-	function tolak($nip){
-	$where = array('nip' => $nip);
+	function tolak($id_judul){
+	$where = array('id_judul' => $id_judul);
 
 	$data = array(
 			'status' =>"Di Tolak"
@@ -77,10 +77,10 @@ class c_review extends CI_Controller{
 }
 
 	//memnerima sebagai pembimbing
-	function Terima($nip){	
+	function Terima($id_judul){	
 	
 	
-	$where = array('nip' => $nip);
+	$where = array('id_judul' => $id_judul);
 	$data = array(
 			'status' =>"Di Terima"
 			);
