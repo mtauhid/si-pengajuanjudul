@@ -223,25 +223,25 @@
               </a>
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='<?php echo site_url('c_hasilreview') ?>'>
+                  <a href='<?php echo site_url('c_review') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Review Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#')>
+                  <a href='<?php echo site_url('c_daftarjudul') ?>')>
                     <i class='icon-caret-right'></i>
                     <span>Daftar Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='<?php echo site_url('c_inputjuduldosen') ?>'>
+                  <a href='<?php echo site_url('c_rekomendasijudul') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Rekomendasi Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='<?php echo site_url('/c_inputjuduldosen/v_createinputjuduldosen') ?>'>
+                  <a href='<?php echo site_url('/c_inputrekomendasijudul/v_createinputrekomendasi') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Tambah Rekomendasi Judul</span>
                   </a>

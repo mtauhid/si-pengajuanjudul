@@ -88,6 +88,18 @@ class c_review extends CI_Controller{
 	redirect('c_review');
 }
 
+function hapus($id_judul){
+		$where = array('id_judul' => $id_judul);	
+		$this->m_datadosen->hapus_data($where,'tb_judul');
+		redirect('c_review/index');
+	}
+
+	public function edit($id_judul){
+		$where = array('id_judul' => $id_judul);
+		$data['tb_judul'] = $this->m_datadosen->edit_data($where,'tb_judul')->result();
+		$this->load->view('v_review',$data);
+	}
+
 }
 
 

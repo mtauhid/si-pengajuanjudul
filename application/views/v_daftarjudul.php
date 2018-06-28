@@ -7,7 +7,7 @@
                   <div class='page-header'>
                     <h1 class='pull-left'>
                       <i class='icon-table'></i>
-                      <span>Review Judul</span>
+                      <span>Daftar Judul</span>
                     </h1>
                     </div>
                 </div>
