@@ -7,7 +7,7 @@
                   <div class='page-header'>
                     <h1 class='pull-left'>
                       <i class='icon-table'></i>
-                      <span>Hak Akses Dosen</span>
+                      <span>Data Mahasiswa</span>
                     </h1>
                     </div>
                 </div>
@@ -44,13 +44,13 @@
 								<td><?php echo $u->prodi_mahasiswa ?></td>
 								<td><?php echo $u->semester ?></td>
                                 <td style="background-color: #f1f1f1;width: 10px;">
-                                  <div class='text-center'>
-                                    <a href="<?php echo site_url('/c_dataMahasiswa/edit/'.$u->nim)?>" class="btn btn-primary">Ubah</a>
-                                  </div>
+                                <div class='text-center'>
+                                  <a href="<?php echo site_url('c_dataMahasiswa/edit/'.$u->nim)?>" class="btn btn-danger">Edit</a> 
+								</div>
                                 </td>
                                 <td style="background-color: #f1f1f1;width: 10px;">
                                 	<div class='text-center'>
-                                    <a href="<?php echo site_url('c_dataMahasiswa/hapus/'.$u->nim)?>" class="btn btn-danger">Hapus</a>
+                                    <a href="<?php echo site_url('c_dataMahasiswa/v_deleteinputmahasiswa/'.$u->nim)?>" class="btn btn-danger">Hapus</a>
                                   </div>
                                 </td>
                               </tr>
