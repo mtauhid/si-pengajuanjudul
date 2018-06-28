@@ -91,7 +91,7 @@
               </a>
             </li>
             <li class=''>
-              <a href='buttons_and_icons.html'>
+              <a href='<?php echo base_url("c_deadline"); ?>'>
                 <i class='icon-bell'></i>
                 <span>Deadline</span>
               </a>
