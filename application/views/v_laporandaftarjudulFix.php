@@ -18,7 +18,7 @@
   <div id="print">
       <center>
         <h2>Laporan Daftar Usulan Tugas Akhir FInal</h2>
-		<h2>Jurusan Teknik Informatika Politeknik Negeri Jember Tahun 
+		<h2>Jurusan Teknologi Informasi Politeknik Negeri Jember Tahun 
 		<?php $mydate=getdate(date("U"));
 			  echo " $mydate[year]";
 		?>  

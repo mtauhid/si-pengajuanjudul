@@ -70,6 +70,12 @@
                     <span>Tambah Data Mahasiswa</span>
                   </a>
                 </li>
+				<li class=''>
+                  <a href='widgets.html'>
+                    <i class='icon-caret-right'></i>
+                    <span>Pengajual Judul</span>
+                  </a>
+                </li>
                 <li class=''>
                   <a href='widgets.html'>
                     <i class='icon-caret-right'></i>
@@ -116,13 +122,13 @@
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_daftarbimbingan'>
                     <i class='icon-caret-right'></i>
                     <span>Daftar Bimbingan</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_buktibimbingan'>
                     <i class='icon-caret-right'></i>
                     <span>Kartu Bimbingan</span>
                   </a>
@@ -193,13 +199,13 @@
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_daftarbimbingan'>
                     <i class='icon-caret-right'></i>
                     <span>Daftar Bimbingan</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='#'>
+                  <a href='c_buktibimbingan'>
                     <i class='icon-caret-right'></i>
                     <span>Kartu Bimbingan</span>
                   </a>
