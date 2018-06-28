@@ -7,7 +7,7 @@
                   <div class='page-header'>
                     <h1 class='pull-left'>
                       <i class='icon-table'></i>
-                      <span>Hak Akses Mahasiswa</span>
+                      <span>Daftar Judul</span>
                     </h1>
                     </div>
                 </div>

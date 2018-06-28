@@ -229,7 +229,7 @@
                   </a>
                 </li>
                 <li class=''>
-                  <a href='<?php echo site_url('c_daftarjudul') ?>')>
+                  <a href='<?php echo site_url('c_inputjudulmhs') ?>')>
                     <i class='icon-caret-right'></i>
                     <span>Daftar Judul</span>
                   </a>
