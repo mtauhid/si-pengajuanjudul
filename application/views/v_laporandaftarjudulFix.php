@@ -1,16 +1,24 @@
-<html>
-  <head>
-    <title>Cetak laporan Daftar usulan judul </title>
-  </head>
-  <body>
-  <!--Scrpit prnint -->
-   <a>Gunakan Browser Google Chrome Agar Performa lebih maksimal</a><br>
- <button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button>
-<button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button>
+<section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-table'></i>
+                      <span>Laporan</span>
+                    </h1>
+                    </div>
+                </div>
+              </div>
+   <a><center>Gunakan Browser Google Chrome Agar Performa lebih maksimal</center></a><br>
+ <center><button  onclick="PrintDoc()">Print Data</button>
+<button  onclick="PrintPreview()">Print Preview</button></center>
   <div id="print">
       <center>
-        <h2>Laporan Daftar Usulan Tugas Akhir  </h2>
-		<h2>Jurusan Teknik informatika politeknik negeri jember tahun 
+        <h2>Laporan Daftar Usulan Tugas Akhir FInal</h2>
+		<h2>Jurusan Teknik Informatika Politeknik Negeri Jember Tahun 
 		<?php $mydate=getdate(date("U"));
 			  echo " $mydate[year]";
 		?>  
@@ -32,7 +40,7 @@
 		</tr>
 		<?php 
 		$no = $this->uri->segment('3') + 1;
-		foreach($table_ta as $u){ 
+		foreach($tb_judul as $u){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
@@ -51,9 +59,6 @@
 	echo $this->pagination->create_links();
 	?>
   </div>
-  </body>
-</html>
-
  <script type="text/javascript">
  /*--This JavaScript method for Print command--*/
  function PrintDoc() {

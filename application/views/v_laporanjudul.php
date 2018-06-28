@@ -5,12 +5,12 @@
   <body>
   <!--Scrpit prnint -->
    <a>Gunakan Browser Google Chrome Agar Performa lebih maksimal</a><br>
- <button  onclick="PrintDoc()"><img src="img/print.png">Print Data</button>
-<button  onclick="PrintPreview()"><img src="img/preview.png">Print Preview</button>
+ <center><button  onclick="PrintDoc()">Print Data</button>
+<button  onclick="PrintPreview()">Print Preview</button></center>
   <div id="print">
       <center>
         <h2>Laporan Daftar Usulan Tugas Akhir  </h2>
-		<h2>Jurusan Teknik informatika politeknik negeri jember tahun 
+		<h2>Jurusan Teknik Informatika Politeknik Negeri Jember Tahun 
 		<?php $mydate=getdate(date("U"));
 			  echo " $mydate[year]";
 		?>  

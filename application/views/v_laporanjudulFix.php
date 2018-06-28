@@ -12,13 +12,12 @@
                     </div>
                 </div>
               </div>
-   <a><center>Gunakan Browser Google Chrome Agar Performa lebih maksimal</center></a><br>
  <center><button  onclick="PrintDoc()">Print Data</button>
 <button  onclick="PrintPreview()">Print Preview</button></center>
   <div id="print">
       <center>
-        <h2>Laporan Daftar Usulan Tugas Akhir</h2>
-		<h2>Jurusan Teknik Informatika Politeknik Negeri Jember Tahun
+        <h2>Laporan Daftar Usulan Tugas Akhir Final</h2>
+		<h2>Jurusan Teknik Informatika Politeknik Negeri Jember Tahun 
 		<?php $mydate=getdate(date("U"));
 			  echo " $mydate[year]";
 		?>  
@@ -29,37 +28,36 @@
 	
 	<table style="margin:20px auto;" border="1">
 		<tr>
-		    <tr><th>No : </th>
-		    <th>NIM :</th>
-			<th>Nama Judul :</th>
-			<th>Ringkasan :</th>
-			<th>Pembagian Tugas :</th>
-			<th>Pengerjaan :</th>
+			<th>No</th>
+			<th>NIM</th>
+			<th>Nama Judul</th>
+			<th>Ringkasan</th>
+			<th>Pembagian Tugas</th>
+			<th>Pengerjaan</th>
+			<th>Status</th>
 			
-			</tr>
-		
+		</tr>
 		<?php 
 		$no = $this->uri->segment('3') + 1;
-		foreach($tb_judul as $u){ 
+		foreach($table_ta as $u){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-		 	<td><?php echo $u->nim ?></td>
-		 <td><?php echo $u->nama_judul ?></td>
-		<td><?php echo $u->ringkasan ?></td>
-		<td><?php echo $u->pembagian_tugas ?></td>
-	     <td><?php echo $u->pengerjaan ?></td></tr>
+			<td><?php echo $u->nim ?></td>
+			<td><?php echo $u->nama_judul ?></td>
+			<td><?php echo $u->ringkasan ?></td>
+			<td><?php echo $u->pembagian_tugas ?></td>
+			<td><?php echo $u->pengerjaan ?></td>
+			<td><?php echo $u->status ?></td>
 			
-			
-		
+		</tr>
 		<?php } ?>
 	</table>
 	<br/>
 	<?php 
 	echo $this->pagination->create_links();
 	?>
-  </div>
-
+</div>
  <script type="text/javascript">
  /*--This JavaScript method for Print command--*/
  function PrintDoc() {

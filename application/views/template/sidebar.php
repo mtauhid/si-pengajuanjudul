@@ -43,6 +43,12 @@
                     <span>Tambah Rekomendasi Judul</span>
                   </a>
                 </li>
+                <li class=''>
+                  <a href='<?php echo site_url('c_hasilreview') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Review Judul</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li>
@@ -90,18 +96,38 @@
                 <span>Deadline</span>
               </a>
             </li>
-            
-            <li class=''>
-              <a href='c_statistik'>
-                <i class='icon-bar-chart'></i>
-                <span>Statistik</span>
-              </a>
-            </li>
-            <li class=''>
-              <a href='tables.html'>
-                <i class='icon-file'></i>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-user'></i>
                 <span>Laporan</span>
+                <i class='icon-angle-down angle-down'></i>
               </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporan') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporanJudulFix') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa FInal</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Daftar Bimbingan</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Kartu Bimbingan</span>
+                  </a>
+                </li>
+              </ul>
             </li>
 
 
@@ -114,23 +140,17 @@
                 <span>Dashboard</span>
               </a>
             </li>
-            <li class=''>
-                      <a class="dropdown-collapse" href="#"><i class='icon-user'></i>
-              <span>Dosen</span>
-              <i class='icon-angle-down angle-down'></i>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-user'></i>
+                <span>Judul</span>
+                <i class='icon-angle-down angle-down'></i>
               </a>
-      
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='<?php echo site_url('c_inputdosen') ?>'>
+                  <a href='#'>
                     <i class='icon-caret-right'></i>
-                    <span>Data Dosen</span>
-                  </a>
-                </li>
-                <li class=''>
-                  <a href='<?php echo site_url('/c_inputdosen/v_createinputdosen') ?>'>
-                    <i class='icon-caret-right'></i>
-                    <span>Tambah Data Dosen</span>
+                    <span>Daftar Judul</span>
                   </a>
                 </li>
                 <li class=''>
@@ -148,25 +168,44 @@
               </ul>
             </li>
             <li class=''>
-              <a href='buttons_and_icons.html'>
-                <i class='icon-cog'></i>
-                <span>Pengaturan</span>
-              </a>
-            </li>
-            
-            <li class=''>
               <a href='c_statistik'>
                 <i class='icon-bar-chart'></i>
                 <span>Statistik</span>
               </a>
             </li>
-            <li class=''>
-              <a href='tables.html'>
-                <i class='icon-file'></i>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-user'></i>
                 <span>Laporan</span>
+                <i class='icon-angle-down angle-down'></i>
               </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporan') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporanJudulFix') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa Final</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Daftar Bimbingan</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Kartu Bimbingan</span>
+                  </a>
+                </li>
+              </ul>
             </li>
-
             <?php }else if($this ->session ->userdata('level') == "Reviewer"){ ?>
 
 
@@ -176,23 +215,23 @@
                 <span>Dashboard</span>
               </a>
             </li>
-            <li class=''>
-                      <a class="dropdown-collapse" href="#"><i class='icon-user'></i>
-              <span>Review Judul</span>
-              <i class='icon-angle-down angle-down'></i>
+              <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-user'></i>
+                <span>Judul</span>
+                <i class='icon-angle-down angle-down'></i>
               </a>
-      
               <ul class='nav nav-stacked'>
                 <li class=''>
-                  <a href='<?php echo site_url('c_inputdosen') ?>'>
+                  <a href='<?php echo site_url('c_hasilreview') ?>'>
                     <i class='icon-caret-right'></i>
                     <span>Review Judul</span>
                   </a>
                 </li>
                 <li class=''>
-                  <a href='<?php echo site_url('/c_inputdosen/v_createinputdosen') ?>'>
+                  <a href='#')>
                     <i class='icon-caret-right'></i>
-                    <span>Status Judul Mahasiswa</span>
+                    <span>Daftar Judul</span>
                   </a>
                 </li>
                 <li class=''>
@@ -215,11 +254,38 @@
                 <span>Statistik</span>
               </a>
             </li>
-            <li class=''>
-              <a href='tables.html'>
-                <i class='icon-file'></i>
+            <li>
+              <a class='dropdown-collapse ' href='#'>
+                <i class='icon-user'></i>
                 <span>Laporan</span>
+                <i class='icon-angle-down angle-down'></i>
               </a>
+              <ul class='nav nav-stacked'>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporan') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='<?php echo site_url('/c_laporanJudulFix') ?>'>
+                    <i class='icon-caret-right'></i>
+                    <span>Judul Mahasiswa FInal</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Daftar Bimbingan</span>
+                  </a>
+                </li>
+                <li class=''>
+                  <a href='#'>
+                    <i class='icon-caret-right'></i>
+                    <span>Kartu Bimbingan</span>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <?php }else if($this ->session ->userdata('level') == "Mahasiswa"){ ?>
