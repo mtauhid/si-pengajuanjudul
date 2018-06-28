@@ -32,7 +32,7 @@ class c_deadline extends CI_Controller {
 
     public function save()
     {
-        $input['id_deadline'] = $this->input->post('id');
+        $input['id_deadline'] = $this->input->post('id_deadline');
         $input['nama_deadline'] = $this->input->post('nama');
         $input['tanggal_awal'] = $this->input->post('tgl_awal');
         $input['tanggal_akhir'] = $this->input->post('tgl_akhir');
@@ -54,9 +54,9 @@ class c_deadline extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function v_updatedeadline($id)
+    public function v_updatedeadline($id_deadline)
     {
-        $this->db->where('id_deadline', $id);
+        $this->db->where('id_deadline', $id_deadline);
         $data['update'] = $this->db->get('tb_deadline')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
@@ -64,9 +64,9 @@ class c_deadline extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function v_deletedeadline($id)
+    public function v_deletedeadline($id_deadline)
     {
-        $this->db->where('id_deadline', $id);
+        $this->db->where('id_deadline', $id_deadline);
         $data['v_deletedeadline'] = $this->db->get('tb_deadline')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');

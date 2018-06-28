@@ -30,7 +30,7 @@ if (!isset($update)) {
                             
                             <form method="post" action="<?php echo site_url('/c_deadline/real_delete') ?>">
                                 <p>Apakah anda yakin ingin menghapus deadline <strong><?php echo $v_deletedeadline['id_deadline'] ?></strong></p>
-                                <input type="hidden" name="id" value="<?php echo $v_deletedeadline['id_deadline'] ?>">
+                                <input type="hidden" name="id_deadline" value="<?php echo $v_deletedeadline['id_deadline'] ?>">
                                 <a class="btn btn-primary" href="<?php echo site_url('/c_deadline/') ?>">Batal</a>
                                 <button type="submit" class="btn btn-danger">Hapus</button>
                             </form>

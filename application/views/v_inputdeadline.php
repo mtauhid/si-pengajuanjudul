@@ -21,7 +21,7 @@
 if (!isset($update)) {
     $update = array('id_deadline' => '', 'nama_deadline' => '', 'tanggal_awal' => '', 'tanggal_akhir' => '');
 } else {
-    $update_flag = '<input type="hidden" name="updateID" value="'.$update->id_deadline.'">';
+    $update_flag = '<input type="hidden" name="updateID" value="'.$update['id_deadline'].'">';
 }
 ?>
               <div class='row'>
@@ -33,7 +33,7 @@ if (!isset($update)) {
               
               <div class="form-group">
                 <label for="nama_deadline">Nama Deadline</label>
-                <input type="text" class="form-control" name="nama" id="nama_deadline" value="<?php echo $update['nama_deadline'] ?>" placeholder="Masukkan Judul">
+                <input type="text" class="form-control" name="nama" id="nama_deadline" value="<?php echo $update['nama_deadline'] ?>" placeholder="nama_deadline">
               </div>
 
               <div class="form-group">
